@@ -49,11 +49,12 @@ export const metadata: Metadata = {
   keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: "ncdai",
+      name: "subhajitdhali",
       url: SITE_INFO.url,
     },
   ],
-  creator: "ncdai",
+  publisher: "subhajitdhali",
+  creator: "subhajitdhali",
   openGraph: {
     siteName: SITE_INFO.name,
     url: "/",
@@ -73,23 +74,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@iamncdai", // Twitter username
+    creator: "@subhajitdhali", // Twitter username
     images: [SITE_INFO.ogImage],
   },
   icons: {
     icon: [
       {
-        url: "https://assets.chanhdai.com/images/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "https://assets.chanhdai.com/images/favicon.svg",
+        url: "/icon/faviconWhite.svg",
         type: "image/svg+xml",
       },
     ],
     apple: {
-      url: "https://assets.chanhdai.com/images/apple-touch-icon.png",
-      type: "image/png",
+      url: "/icon/faviconWhite.svg",
+      type: "image/svg+xml",
       sizes: "180x180",
     },
   },
@@ -131,7 +128,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body>
+      <body suppressHydrationWarning>
         <Providers>
           <NuqsAdapter>
             <ConsentManager>{children}</ConsentManager>

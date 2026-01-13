@@ -11,8 +11,20 @@ export async function GET() {
   const card = new VCard();
 
   card
-    .addName(USER.lastName, USER.firstName)
-    .addPhoneNumber(decodePhoneNumber(USER.phoneNumber))
+    .addName(USER.lastName, USER.firstName);
+  
+  // Add all phone numbers
+  const phoneNumbers = USER.phoneNumbers && USER.phoneNumbers.length > 0
+    ? USER.phoneNumbers
+    : USER.phoneNumber
+      ? [USER.phoneNumber]
+      : [];
+  
+  phoneNumbers.forEach((phone) => {
+    card.addPhoneNumber(decodePhoneNumber(phone));
+  });
+  
+  card
     .addAddress(USER.address)
     .addEmail(decodeEmail(USER.email))
     .addURL(USER.website);

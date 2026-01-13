@@ -15,6 +15,8 @@ export type User = {
   address: string;
   /** E.164 format, base64 encoded (https://t.io.vn/base64-string-converter) */
   phoneNumber: string;
+  /** Array of phone numbers, each base64 encoded (https://t.io.vn/base64-string-converter) */
+  phoneNumbers?: string[];
   /** base64 encoded (https://t.io.vn/base64-string-converter) */
   email: string;
   /** Personal/homepage URL */

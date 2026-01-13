@@ -56,7 +56,10 @@ export function Overview() {
 
           <CurrentLocalTimeItem timeZone={USER.timeZone} />
 
-          <PhoneItem phoneNumber={USER.phoneNumber} />
+          <PhoneItem
+            phoneNumber={USER.phoneNumber}
+            phoneNumbers={USER.phoneNumbers}
+          />
 
           <EmailItem email={USER.email} />
 

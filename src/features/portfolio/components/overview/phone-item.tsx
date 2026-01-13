@@ -13,12 +13,24 @@ import {
 } from "./intro-item";
 
 type PhoneItemProps = {
-  phoneNumber: string;
+  phoneNumber?: string;
+  phoneNumbers?: string[];
 };
 
-export function PhoneItem({ phoneNumber }: PhoneItemProps) {
+export function PhoneItem({ phoneNumber, phoneNumbers }: PhoneItemProps) {
   const isClient = useIsClient();
-  const phoneNumberDecoded = decodePhoneNumber(phoneNumber);
+
+  // Use phoneNumbers array if available, otherwise fall back to single phoneNumber
+  const numbers =
+    phoneNumbers && phoneNumbers.length > 0
+      ? phoneNumbers
+      : phoneNumber
+        ? [phoneNumber]
+        : [];
+
+  if (numbers.length === 0) {
+    return null;
+  }
 
   return (
     <IntroItem>
@@ -27,18 +39,29 @@ export function PhoneItem({ phoneNumber }: PhoneItemProps) {
       </IntroItemIcon>
 
       <IntroItemContent>
-        <IntroItemLink
-          href={isClient ? `tel:${phoneNumberDecoded}` : "#"}
-          aria-label={
-            isClient
-              ? `Call ${formatPhoneNumber(phoneNumberDecoded)}`
-              : "Phone number"
-          }
-        >
-          {isClient
-            ? formatPhoneNumber(phoneNumberDecoded)
-            : "[Phone protected]"}
-        </IntroItemLink>
+        {numbers.map((num, index) => {
+          const decoded = decodePhoneNumber(num);
+          const formatted = isClient
+            ? formatPhoneNumber(decoded)
+            : "[Phone protected]";
+          const telHref = isClient ? `tel:${decoded.replace(/\s/g, "")}` : "#";
+
+          return (
+            <span key={index}>
+              <IntroItemLink
+                href={telHref}
+                aria-label={isClient ? `Call ${formatted}` : "Phone number"}
+              >
+                {formatted}
+              </IntroItemLink>
+              {index < numbers.length - 1 && (
+                <span className="text-muted-foreground" aria-hidden="true">
+                  {" / "}
+                </span>
+              )}
+            </span>
+          );
+        })}
       </IntroItemContent>
     </IntroItem>
   );

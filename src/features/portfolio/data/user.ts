@@ -15,9 +15,13 @@ export const USER = {
     "Frontend Developer",
   ],
   address: "Kolkata, India",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  website: "https://chanhdai.com",
+  phoneNumber: "Kzk3MSA1MCA0NjAgMjYzMg==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  phoneNumbers: [
+    "Kzk3MSA1MCA0NjAgMjYzMg==", // +971 50 460 2632
+    "KzkxIDg0MyA2NDY0IDkzNw==", // +91 843 6464 937
+  ],
+  email: "c3ViaGFqaXRkaGFsaTBAZ21haWwuY29t", // base64 encoded
+  website: "https://subhajit-dhali.vercel.app/",
   jobTitle: "Design Engineer",
   jobs: [
     {

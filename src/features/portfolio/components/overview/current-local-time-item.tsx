@@ -70,15 +70,24 @@ export function CurrentLocalTimeItem({ timeZone }: CurrentLocalTimeItemProps) {
       const targetOffset = tzOffset(timeZone, now); // in minutes
 
       const minutesDiff = Math.abs(targetOffset - viewerOffset);
-      const hoursDiff = minutesDiff / 60;
+      const isAhead = targetOffset > viewerOffset;
 
       let diff = "";
-      if (hoursDiff < 1) {
+      if (minutesDiff === 0) {
         diff = " // same time";
       } else {
-        const hours = Math.floor(hoursDiff);
-        const isAhead = targetOffset > viewerOffset;
-        diff = ` // ${hours}h ${isAhead ? "ahead" : "behind"}`;
+        const hours = Math.floor(minutesDiff / 60);
+        const minutes = minutesDiff % 60;
+
+        const parts: string[] = [];
+        if (hours > 0) {
+          parts.push(`${hours}h`);
+        }
+        if (minutes > 0) {
+          parts.push(`${minutes}m`);
+        }
+
+        diff = ` // ${parts.join(" ")} ${isAhead ? "ahead" : "behind"}`;
       }
       setDiffText(diff);
     };

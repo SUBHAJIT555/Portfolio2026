@@ -2,15 +2,12 @@ import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { About } from "@/features/portfolio/components/about";
 import { Awards } from "@/features/portfolio/components/awards";
-// import { Blog } from "@/features/portfolio/components/blog";
-import { Bookmarks } from "@/features/portfolio/components/bookmarks";
-// import { Brand } from "@/features/portfolio/components/brand";
 import { Certifications } from "@/features/portfolio/components/certifications";
-import { Components } from "@/features/portfolio/components/components";
+import { ContactForm } from "@/features/portfolio/components/contact-form";
 import { Experiences } from "@/features/portfolio/components/experiences";
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions";
 import { Overview } from "@/features/portfolio/components/overview";
-// import { ProfileCover } from "@/features/portfolio/components/profile-cover";
+import { ProfileCover } from "@/features/portfolio/components/profile-cover";
 import { ProfileHeader } from "@/features/portfolio/components/profile-header";
 import { Projects } from "@/features/portfolio/components/projects";
 import { SocialLinks } from "@/features/portfolio/components/social-links";
@@ -30,7 +27,7 @@ export default function Page() {
       />
 
       <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
-        {/* <ProfileCover /> */}
+        <ProfileCover />
         <ProfileHeader />
         <Separator />
 
@@ -52,12 +49,6 @@ export default function Page() {
         <TeckStack />
         <Separator />
 
-        <Components />
-        <Separator />
-
-        {/* <Blog />
-        <Separator /> */}
-
         <Experiences />
         <Separator />
 
@@ -70,11 +61,8 @@ export default function Page() {
         <Certifications />
         <Separator />
 
-        <Bookmarks />
+        <ContactForm />
         <Separator />
-
-        {/* <Brand />
-        <Separator /> */}
       </div>
     </>
   );

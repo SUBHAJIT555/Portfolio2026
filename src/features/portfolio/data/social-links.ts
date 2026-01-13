@@ -1,40 +1,47 @@
+import facebookIcon from "@/assets/socialicon/facebook.webp";
+import githubIcon from "@/assets/socialicon/github.webp";
+import gmailIcon from "@/assets/socialicon/gmail.webp";
+import instagramIcon from "@/assets/socialicon/instagram.webp";
+import linkedinIcon from "@/assets/socialicon/linkedin.webp";
+import xIcon from "@/assets/socialicon/x.webp";
+
 import type { SocialLink } from "../types/social-links";
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/facebook.webp?t=1759581475",
+    icon: facebookIcon,
     title: "Facebook",
     description: "Subhajit Dhali",
     href: "https://facebook.com",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/instagram.webp?t=1759581475",
+    icon: instagramIcon,
     title: "Instagram",
-    description: "Subhajit Dhali",
+    description: "_ig.exe",
     href: "https://instagram.com",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/x.webp?t=1759581475",
+    icon: xIcon,
     title: "X (formerly Twitter)",
-    description: "Subhajit Dhali",
+    description: "@ttr_exe",
     href: "https://x.com",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
+    icon: linkedinIcon,
     title: "LinkedIn",
     description: "Subhajit Dhali",
     href: "https://linkedin.com",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/github.webp?t=1759581475",
+    icon: githubIcon,
     title: "GitHub",
     description: "subhajit555",
     href: "https://github.com",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/gmail.webp?t=1759581475",
+    icon: gmailIcon,
     title: "Gmail",
-    description: "Subhajit Dhali",
+    description: "subhajitdhali0@gmail.com",
     href: "https://mail.google.com",
   },
 ];

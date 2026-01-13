@@ -4,30 +4,29 @@ import { useCommandState } from "cmdk";
 import type { LucideProps } from "lucide-react";
 import {
   AwardIcon,
-  BookmarkIcon,
+  // BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
   CornerDownLeftIcon,
-  DownloadIcon,
-  FileTextIcon,
-  HeartIcon,
+  // DownloadIcon,
+  // FileTextIcon,
+  // HeartIcon,
   LayersIcon,
   MoonStarIcon,
-  QuoteIcon,
-  RssIcon,
+  // QuoteIcon,
+  // RssIcon,
   ShieldCheckIcon,
   SunMediumIcon,
-  TextIcon,
+  // TextIcon,
   TextInitialIcon,
-  TriangleDashedIcon,
-  TypeIcon,
+  // TriangleDashedIcon,
+  // TypeIcon,
 } from "lucide-react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
-import { toast } from "sonner";
 
 import {
   CommandDialog,
@@ -37,15 +36,12 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { useSound } from "@/hooks/use-sound";
 import { trackEvent } from "@/lib/events";
-import { copyText } from "@/utils/copy";
 
-import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
-import { getWordmarkSVG } from "./chanhdai-wordmark";
-import { ComponentIcon, Icons } from "./icons";
+import { Icons } from "./icons";
+import { SubhajitMark } from "./subhajit-mark";
 import { Button } from "./ui/button";
 import { Kbd, KbdGroup } from "./ui/kbd";
 import { Separator } from "./ui/separator";
@@ -55,7 +51,7 @@ type CommandLinkItem = {
   href: string;
 
   icon?: React.ComponentType<LucideProps>;
-  iconImage?: string;
+  iconImage?: string | StaticImageData;
   keywords?: string[];
   openInNewTab?: boolean;
 };
@@ -64,17 +60,7 @@ const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Portfolio",
     href: "/",
-    icon: ChanhDaiMark,
-  },
-  {
-    title: "Components",
-    href: "/components",
-    icon: Icons.react,
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-    icon: RssIcon,
+    icon: SubhajitMark,
   },
 ];
 
@@ -84,11 +70,7 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     href: "/#about",
     icon: TextInitialIcon,
   },
-  {
-    title: "Testimonials",
-    href: "/#testimonials",
-    icon: QuoteIcon,
-  },
+
   {
     title: "Tech Stack",
     href: "/#stack",
@@ -114,16 +96,6 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     href: "/#certs",
     icon: ShieldCheckIcon,
   },
-  {
-    title: "Bookmarks",
-    href: "/#bookmarks",
-    icon: BookmarkIcon,
-  },
-  {
-    title: "Download vCard",
-    href: "/vcard",
-    icon: DownloadIcon,
-  },
 ];
 
 const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
@@ -133,30 +105,10 @@ const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
   openInNewTab: true,
 }));
 
-const OTHER_LINK_ITEMS: CommandLinkItem[] = [
-  {
-    title: "Sponsors",
-    href: "/sponsors",
-    icon: HeartIcon,
-  },
-  {
-    title: "llms.txt",
-    href: "/llms.txt",
-    icon: FileTextIcon,
-    openInNewTab: true,
-  },
-  {
-    title: "RSS Feed",
-    href: "/rss",
-    icon: RssIcon,
-    openInNewTab: true,
-  },
-];
-
-export function CommandMenu({ posts }: { posts: Post[] }) {
+export function CommandMenu() {
   const router = useRouter();
 
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const [open, setOpen] = useState(false);
 
@@ -201,21 +153,6 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [router]
   );
 
-  const handleCopyText = useCallback((text: string, message: string) => {
-    setOpen(false);
-
-    trackEvent({
-      name: "command_menu_action",
-      properties: {
-        action: "copy",
-        text: text,
-      },
-    });
-
-    copyText(text);
-    toast.success(message);
-  }, []);
-
   const createThemeHandler = useCallback(
     (theme: "light" | "dark" | "system") => () => {
       setOpen(false);
@@ -241,28 +178,13 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [playClick, setTheme]
   );
 
-  const { componentLinks, blogLinks } = useMemo(
-    () => ({
-      componentLinks: posts
-        .filter((post) => post.metadata?.category === "components")
-        .sort((a, b) =>
-          a.metadata.title.localeCompare(b.metadata.title, "en", {
-            sensitivity: "base",
-          })
-        )
-        .map(postToCommandLinkItem),
-      blogLinks: posts
-        .filter((post) => post.metadata?.category !== "components")
-        .map(postToCommandLinkItem),
-    }),
-    [posts]
-  );
+  // Removed componentLinks and blogLinks as they're no longer used
 
   return (
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1.5 rounded-full border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
+        className="h-8 gap-1.5 rounded-md border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
         onClick={() => {
           setOpen(true);
           trackEvent({
@@ -309,64 +231,10 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           />
 
           <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
-            onLinkSelect={handleOpenLink}
-          />
-
-          <CommandLinkGroup
-            heading="Blog"
-            links={blogLinks}
-            fallbackIcon={TextIcon}
-            onLinkSelect={handleOpenLink}
-          />
-
-          <CommandLinkGroup
             heading="Social Links"
             links={SOCIAL_LINK_ITEMS}
             onLinkSelect={handleOpenLink}
           />
-
-          <CommandGroup heading="Brand Assets">
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Copied Mark as SVG"
-                );
-              }}
-            >
-              <ChanhDaiMark />
-              Copy Mark as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getWordmarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Copied Logotype as SVG"
-                );
-              }}
-            >
-              <TypeIcon />
-              Copy Logotype as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
-            >
-              <TriangleDashedIcon />
-              Brand Guidelines
-            </CommandItem>
-
-            <CommandItem asChild>
-              <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>
-                <DownloadIcon />
-                Download Brand Assets
-              </a>
-            </CommandItem>
-          </CommandGroup>
 
           <CommandGroup heading="Theme">
             <CommandItem
@@ -391,12 +259,6 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
               Auto
             </CommandItem>
           </CommandGroup>
-
-          <CommandLinkGroup
-            heading="Other"
-            links={OTHER_LINK_ITEMS}
-            onLinkSelect={handleOpenLink}
-          />
         </CommandList>
 
         <CommandMenuFooter />
@@ -530,7 +392,7 @@ function CommandMenuFooter() {
       <div className="flex h-10" />
 
       <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 border-t bg-zinc-100/30 px-4 text-xs font-medium dark:bg-zinc-800/30">
-        <ChanhDaiMark className="size-6 text-muted-foreground" aria-hidden />
+        <SubhajitMark className="size-6 text-muted-foreground" aria-hidden />
 
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
@@ -547,21 +409,4 @@ function CommandMenuFooter() {
       </div>
     </>
   );
-}
-
-function postToCommandLinkItem(post: Post): CommandLinkItem {
-  const isComponent = post.metadata?.category === "components";
-
-  const IconComponent = isComponent
-    ? (props: LucideProps) => (
-        <ComponentIcon {...props} variant={post.metadata.icon} />
-      )
-    : undefined;
-
-  return {
-    title: post.metadata.title,
-    href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
-    keywords: isComponent ? ["component"] : undefined,
-    icon: IconComponent,
-  };
 }
