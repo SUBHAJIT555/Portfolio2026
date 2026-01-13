@@ -17,8 +17,8 @@ export const USER = {
   address: "Kolkata, India",
   phoneNumber: "Kzk3MSA1MCA0NjAgMjYzMg==", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   phoneNumbers: [
-    "Kzk3MSA1MCA0NjAgMjYzMg==", // +971 50 460 2632
-    "KzkxIDg0MyA2NDY0IDkzNw==", // +91 843 6464 937
+    "Kzk3MSA1MCA0NjAgMjYzMg==", // +971  base64 encoded
+    "KzkxIDg0MyA2NDY0IDkzNw==", // +91 base64 encoded
   ],
   email: "c3ViaGFqaXRkaGFsaTBAZ21haWwuY29t", // base64 encoded
   website: "https://subhajit-dhali.vercel.app/",
@@ -31,17 +31,7 @@ export const USER = {
     },
     //
   ],
-  //   about: `
-  // Hello, World! I am Chánh Đại — a Design Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
 
-  // With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.
-
-  // One of my key projects, [ZaDark](https://zadark.com), launched in 2022, enhances the Zalo experience on PC and Web, surpassing 80k+ downloads on [SourceForge](https://sourceforge.net/projects/zadark) and reaching 20k+ active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) (as of Sep 2025).
-
-  // I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 4k+ weekly downloads on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker) and was selected for [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) summer 2025 cohort.
-
-  // Let's connect and collaborate!
-  //   `,
   about: `
 **Web Developer** specializing in **Frontend Development** with **2+ years of professional experience**. 
 
@@ -59,8 +49,8 @@ export const USER = {
 - **3D interactive games** for exhibition stands and trade shows
 
 **Technical Expertise:**
-- **React**, **TypeScript**, **JavaScript**, **Node.js**, **Framer Motion**, **Three.js**, **Tailwind CSS**, **Shadcn/ui** and modern frontend libraries
-- **Tools & Technologies**: **Git** / **GitHub**, **VS Code** / **Cursor**, **npm** / **yarn**, **Vite** / **Next.js**, **Docker**, **Postman**, **Chrome DevTools** , **▲Vercel** / **Netlify**
+- **React**, **TypeScript**, **JavaScript**, **Node.js**, **Framer Motion**, **Three.js**, **Tailwind CSS**, **Shadcn/ui**, **npm** / **yarn**, **Vite** / **Next.js**, and modern frontend libraries
+- **Tools & Technologies**: **Git** / **GitHub**, **VS Code** / **Cursor**,  **Docker**, **Postman**, **Chrome DevTools** , **▲Vercel** / **Netlify**
 - Creating **responsive**, **performant**, and **visually engaging** web experiences
 - Strong foundation in **computer science fundamentals** with advanced postgraduate knowledge
 
