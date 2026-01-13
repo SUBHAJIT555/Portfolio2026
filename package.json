@@ -2,23 +2,23 @@
   "name": "chanhdai.com",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://subhajit-dhali.vercel.app/",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
+    "name": "Subhajit Dhali",
+    "email": "subhajitdhali0@gmail.com",
     "url": "https://github.com/ncdai"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Subhajit Dhali",
+      "email": "subhajitdhali0@gmail.com",
+      "url": "https://github.com/subhajit555"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/subhajit555/Portfolio2026"
   },
   "scripts": {
     "dev": "next dev -p 1408",

@@ -1,5 +1,5 @@
+import { FlipSentences } from "@/components/flip-sentences";
 import { USER } from "@/features/portfolio/data/user";
-import { FlipSentences } from "@/registry/flip-sentences";
 
 import { VerifiedIcon } from "./verified-icon";
 
