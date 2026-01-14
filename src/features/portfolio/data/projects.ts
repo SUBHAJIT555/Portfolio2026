@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
 - Completely responsive and SEO-friendly design
 - Modern, accessible design with user-focused layout
 `,
-    logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
+    logo: "/icon/cyberlabs.svg",
     isExpanded: true,
   },
   // Kalal Creation Project
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
 - Completely responsive and SEO-friendly design
 - Modern, accessible layout focused on user experience
 `,
-    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
+    logo: "/icon/kalalcreation.svg",
   },
   // Groassets Project
   {
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
 - Completely responsive and SEO-friendly design
 - Modern, accessible layout focused on user experience
 `,
-    logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
+    logo: "/icon/groasset.svg",
   },
   //CodeCobble Project
   {
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
 - Completely responsive and SEO-friendly design
 - Modern, accessible layout focused on user experience
 `,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/codecobble.png",
   },
   // Leading Network Project
   {
@@ -156,7 +156,7 @@ export const PROJECTS: Project[] = [
 - Built with shadcn/ui and Tailwind CSS for a clean, modern UI
 - Completely responsive and SEO-friendly design
 - Dynamic and user-focused layout`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/leadingNetwork.svg",
   },
   // Baharnani Exhibition stand  Project
   {
@@ -192,7 +192,7 @@ export const PROJECTS: Project[] = [
 - React Helmet for SEO optimization
 - React Hook Form and React Toastify for form handling and notifications
 - Clean, responsive UI with SEO-friendly design`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/baharnani.webp",
   },
   // Baharnani Corporate gifts  Project
   {
@@ -229,7 +229,7 @@ export const PROJECTS: Project[] = [
 - React Helmet for SEO optimization
 - React Hook Form and React Toastify for form handling and notifications
 - Completely responsive and SEO-friendly design`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/baharnani.webp",
   },
   // 3d map Project
   {
@@ -256,7 +256,7 @@ export const PROJECTS: Project[] = [
 - Touch screen interface for interactive navigation
 - Perfect for tech events and promotion events
 - Web application optimized for event engagement`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/rit.png",
   },
   // ai photo booth Project
   {
@@ -290,7 +290,7 @@ export const PROJECTS: Project[] = [
 - AI transforms the captured image into the selected avatar
 - Instant printing through Printnode connected with a printer
 - Vertical touch screen optimized for kiosk experience`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/baharnani.webp",
   },
   // Himalaya Puzzle Game Project
   {
@@ -307,12 +307,12 @@ export const PROJECTS: Project[] = [
 - Made for tablet only
 - Built with HTML, CSS, JavaScript, jQuery, and AJAX
 - Interactive gameplay focused on user engagement`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/himalaya.webp",
   },
   // Baharnani av landing Project
   {
     id: "Baharnani-av-landing",
-    title: "Baharnani av landing",
+    title: "Baharnani Audio Video Landing",
     period: {
       start: "06.2025",
     },
@@ -337,6 +337,6 @@ export const PROJECTS: Project[] = [
 - Super clean and minimal design for optimal user experience
 - Completely responsive and SEO-friendly design
 - Modern, accessible layout focused on conversion`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+    logo: "/icon/baharnani.webp",
   },
 ];

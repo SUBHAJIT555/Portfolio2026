@@ -18,7 +18,7 @@ export function SiteFooter() {
           recreated by{" "}
           <a
             className="link"
-            href="https://x.com/iamncdai"
+            href="https://x.com/ttr_exe"
             target="_blank"
             rel="noopener"
           >

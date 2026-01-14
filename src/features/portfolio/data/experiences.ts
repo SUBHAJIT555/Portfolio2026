@@ -5,7 +5,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "baharnani",
     companyName: "Baharnani Advertising LLC",
-    companyLogo: "https://corporategiftsdubaii.ae/ui/assets/icon-Bs8D5IH7.svg",
+    companyLogo: "/icon/baharnani.webp",
     positions: [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
@@ -77,78 +77,75 @@ export const EXPERIENCES: Experience[] = [
     isCurrentEmployer: true,
   },
   // inceptial
-    {
-      id: "inceptial",
-      companyName: "Inceptial Infrastructure Technology LLP",
-      companyLogo:
-        "https://static.wixstatic.com/media/987e35_3bb59f89e9534ab294f4572d2d4a46fb~mv2.png/v1/fill/w_201,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/INCEPTIAL%20NEW%20LOGO_edited.png",
-      positions: [
-        {
-          id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
-          title: "Web Developer",
-          employmentPeriod: {
-            start: "03.2023",
-            end: "08.2024",
-          },
-          employmentType: "Full-time",
-          icon: "code",
-          description: `- Developed and maintained scalable React.js-based user interfaces, ensuring high performance and optimal user experience across multiple projects.
+  {
+    id: "inceptial",
+    companyName: "Inceptial Infrastructure Technology LLP",
+    companyLogo: "/icon/inceptial.webp",
+    positions: [
+      {
+        id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
+        title: "Web Developer",
+        employmentPeriod: {
+          start: "03.2023",
+          end: "08.2024",
+        },
+        employmentType: "Full-time",
+        icon: "code",
+        description: `- Developed and maintained scalable React.js-based user interfaces, ensuring high performance and optimal user experience across multiple projects.
   - Collaborated closely with UI/UX designers to translate design mockups into responsive, pixel-perfect web applications with cross-browser compatibility.
   - Optimized application performance through code splitting, lazy loading, and efficient state management, improving load times and user engagement.
   - Enhanced SEO strategies for Single Page Applications (SPAs) using server-side rendering, meta tag optimization, and structured data implementation.
   - Integrated REST APIs using Redux for state management, implementing robust data fetching, caching, and error handling mechanisms.
   - Created comprehensive design systems and component libraries to standardize design practices and accelerate development workflows.
   - Established brand identity guidelines and maintained visual consistency across all digital products and platforms.`,
-          skills: [
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Vite",
-            "Redux",
-            "Tailwind CSS",
-            "GSAP",
-            "Motion",
-            "Git",
-            "Docker",
-            "Performance Optimization",
-            "SEO",
-            "Responsive Design",
-            "Research",
-            "Problem-solving",
-          ],
+        skills: [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Vite",
+          "Redux",
+          "Tailwind CSS",
+          "GSAP",
+          "Motion",
+          "Git",
+          "Docker",
+          "Performance Optimization",
+          "SEO",
+          "Responsive Design",
+          "Research",
+          "Problem-solving",
+        ],
+      },
+      {
+        id: "991692c4-7d02-4666-8d31-933c4831768d",
+        title: "Junior Web Developer",
+        employmentPeriod: {
+          start: "03.2024",
+          end: "08.2024",
         },
-        {
-          id: "991692c4-7d02-4666-8d31-933c4831768d",
-          title: "Junior Web Developer",
-          employmentPeriod: {
-            start: "03.2024",
-            end: "08.2024",
-          },
-          employmentType: "Part-time",
-          icon: "code",
-          description: `- Worked under the guidance of senior developers and project managers, following established development processes and best practices.
+        employmentType: "Part-time",
+        icon: "code",
+        description: `- Worked under the guidance of senior developers and project managers, following established development processes and best practices.
   - Collaborated closely with team members to complete assigned tasks and contribute to project deliverables.
   - Received mentorship and feedback to improve coding skills, problem-solving abilities, and understanding of software development workflows.
   - Participated in team meetings and code reviews to learn from experienced developers and ensure code quality standards.
   - Assisted in implementing features and fixing bugs under supervision, gradually building confidence and technical expertise.
   - Adapted quickly to team dynamics and project requirements, demonstrating eagerness to learn and grow as a developer.`,
-          skills: [
-            "React",
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "Git",
-            "Teamwork",
-            "Collaboration",
-            "Learning",
-            "Problem-solving",
-          ],
-        },
-      ],
-      isCurrentEmployer: true,
-    },
-
-
+        skills: [
+          "React",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Git",
+          "Teamwork",
+          "Collaboration",
+          "Learning",
+          "Problem-solving",
+        ],
+      },
+    ],
+    isCurrentEmployer: true,
+  },
 
   // ----
   //   {
@@ -273,8 +270,6 @@ export const EXPERIENCES: Experience[] = [
   //   },
   // ----
 
-
-  
   {
     id: "education",
     companyName: "Education",
