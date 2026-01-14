@@ -6,6 +6,9 @@ import { SOURCE_CODE_GITHUB_REPO } from "@/config/site";
 const getStargazerCount = unstable_cache(
   async () => {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
       const response = await fetch(
         `https://api.github.com/repos/${SOURCE_CODE_GITHUB_REPO}`,
         {
@@ -14,8 +17,11 @@ const getStargazerCount = unstable_cache(
             Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
             "X-GitHub-Api-Version": "2022-11-28",
           },
+          signal: controller.signal,
         }
       );
+
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         return 0;

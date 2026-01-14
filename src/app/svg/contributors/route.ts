@@ -7,25 +7,37 @@ type GitHubContributor = {
 };
 
 async function fetchContributors(): Promise<string[]> {
-  const response = await fetch(
-    `https://api.github.com/repos/${SOURCE_CODE_GITHUB_REPO}/contributors`,
-    {
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
-    }
-  );
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-  if (!response.ok) {
+    const response = await fetch(
+      `https://api.github.com/repos/${SOURCE_CODE_GITHUB_REPO}/contributors`,
+      {
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+        signal: controller.signal,
+        next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
+      }
+    );
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      return [];
+    }
+
+    const contributors = (await response.json()) as GitHubContributor[];
+
+    return contributors.map((c) => c.login);
+  } catch (error) {
+    // Return empty array on error to prevent build failures
+    console.error("Failed to fetch contributors:", error);
     return [];
   }
-
-  const contributors = (await response.json()) as GitHubContributor[];
-
-  return contributors.map((c) => c.login);
 }
 
 export async function GET() {
