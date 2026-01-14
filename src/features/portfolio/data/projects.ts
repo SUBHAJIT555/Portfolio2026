@@ -1,239 +1,342 @@
 import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
+  // cyberlabs India Project
   {
-    id: "react-wheel-picker",
-    title: "React Wheel Picker",
+    id: "Cyberlabs-India",
+    title: "Cyberlabs India",
     period: {
-      start: "05.2025",
+      start: "01.2026",
     },
-    link: "https://react-wheel-picker.chanhdai.com",
+    link: "https://cyberlab-india.vercel.app/",
     skills: [
-      "Open Source",
       "React",
       "TypeScript",
-      "Monorepo",
-      "Turborepo",
-      "pnpm-workspace",
-      "Package Publishing",
-      "NPM Registry",
-      "GitHub Actions",
+      "Vite",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Tailwind CSS",
+      "yarn",
+      "shadcn/ui",
+      "React Router",
+      "React Hook Form",
     ],
-    description: `iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. / Backed by [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker)
-- 📱 Natural touch scrolling with smooth inertia effect
-- 🖱️ Mouse drag and scroll support for desktop
-- 🔄 Infinite loop scrolling
-- 🎨 Unstyled components for complete style customization
-- ⚡️ Easy installation via shadcn CLI
+    description: `**Cyberlabs India** is a comprehensive cybersecurity training and learning platform offering multiple dynamic services and courses.
+
+- Full multipage website showcasing cybersecurity courses and training programs
+- Smooth scrolling enabled via Lenis for enhanced user experience
+- Motion effects and scroll-based animations for interactivity
+- Built with shadcn/ui and Tailwind CSS for a clean, modern look
+- Completely responsive and SEO-friendly design
+- Modern, accessible design with user-focused layout
 `,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
     isExpanded: true,
   },
+  // Kalal Creation Project
   {
-    id: "chanhdaidotcom",
-    title: "chanhdai.com",
+    id: "Kalal-Creation",
+    title: "Kalal Creation",
     period: {
-      start: "01.2025",
+      start: "01.2026",
     },
-    link: "https://github.com/ncdai/chanhdai.com",
+    link: "https://kalalcreation.vercel.app/",
     skills: [
-      "Open Source",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "Radix UI",
+      "React",
+      "TypeScript",
+      "Vite",
       "Motion",
+      "GSAP",
+      "Lenis",
+      "Tailwind CSS",
+      "yarn",
       "shadcn/ui",
-      "Component Registry",
-      "Vercel",
+      "React Router",
+      "React Hook Form",
     ],
-    description:
-      "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
+    description: `**Kalal Creation** is a multipage website for a multiple service company offering general trading, printing, and event management services with a comprehensive product catalog.
+
+- Features add to cart functionality for seamless product selection
+- Request quote system integrated with cart for service inquiries
+- Smooth scrolling enabled via Lenis for enhanced user experience
+- Motion effects and scroll-based animations for interactivity
+- Built with shadcn/ui and Tailwind CSS for a modern, clean UI
+- Completely responsive and SEO-friendly design
+- Modern, accessible layout focused on user experience
+`,
     logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
   },
+  // Groassets Project
   {
-    id: "quaricdotcom",
-    title: "quaric.com",
+    id: "Groasset",
+    title: "Groasset",
     period: {
-      start: "03.2024",
+      start: "11.2025",
     },
-    link: "https://quaric.com",
+    link: "https://groasset.vercel.app/",
     skills: [
-      "Company Project",
-      "Next.js 15",
-      "Tailwind CSS v3",
+      "React",
+      "TypeScript",
+      "React Router",
+      "Motion",
       "shadcn/ui",
-      "Strapi 5",
-      "VNPAY-QR",
-      "Docker",
-      "Docker Compose",
-      "NGINX",
+      "Tailwind CSS",
     ],
+    description: `**Groasset Invest Ltd** is a trading learning web application that provides educational content, multiple learning challenges, and real-time stock market insights.
+
+- Real-time stock market insights via API integration
+- Showcases multiple learning challenges and educational content
+- Smooth scrolling enabled via Lenis for enhanced user experience
+- Motion effects and scroll-based animations for interactivity
+- Built with shadcn/ui and Tailwind CSS for a slick, modern design and clean UI
+- Completely responsive and SEO-friendly design
+- Modern, accessible layout focused on user experience
+`,
     logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
   },
+  //CodeCobble Project
   {
-    id: "zadark",
-    title: "ZaDark",
+    id: "CodeCobble",
+    title: "CodeCobble Creative Agency",
     period: {
       start: "01.2022",
     },
-    link: "https://zadark.com",
+    link: "https://codecobble-creative-agency.vercel.app/",
     skills: [
-      "Pet Project",
-      "Open Source",
-      "Browser Extension",
-      "CLI",
-      "Docusaurus 3",
+      "React",
+      "TypeScript",
+      "React Router",
+      "Motion",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "yarn",
+      "Lenis",
+      "GSAP",
+      "React Hook Form",
+      "React Icons",
+      "React Router",
     ],
-    description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- Earned 10M+ VND in net sales from a paid Safari Extension
-- 80k+ downloads on SourceForge (awarded Community Leader badge by SourceForge)
-- 20k+ active users via Chrome Web Store (as of Sep 2025)
-- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022`,
+    description: `**CodeCobble Creative Agency** is a multipage website for a creative agency offering web development, graphic design, and digital marketing services.
+
+- Features multiple service pages with detailed descriptions and portfolios
+- Smooth scrolling enabled via Lenis for enhanced user experience
+- Motion effects and scroll-based animations for interactivity
+- Built with shadcn/ui and Tailwind CSS for a modern, clean UI
+- Completely responsive and SEO-friendly design
+- Modern, accessible layout focused on user experience
+`,
     logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
+  // Leading Network Project
   {
-    id: "qabox",
-    title: "QABox",
+    id: "Leading-Network",
+    title: "Leading Network",
     period: {
-      start: "07.2023",
-      end: "07.2023",
+      start: "12.2025",
     },
-    link: "https://github.com/ncdai/qabox",
+    link: "https://leading-network.vercel.app/",
     skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Swiper",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "React Router",
+      "SEO",
+      "Responsive",
     ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
+    description: `**Leading Network** is a general trading website showcasing products with a comprehensive e-commerce system.
+
+- Features add to cart functionality for seamless product selection
+- Quote against cart system for service inquiries
+- Multiple types of products with dynamic product management
+- Smooth scrolling and interactive animations for enhanced user experience
+- Built with shadcn/ui and Tailwind CSS for a clean, modern UI
+- Completely responsive and SEO-friendly design
+- Dynamic and user-focused layout`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
+  // Baharnani Exhibition stand  Project
   {
-    id: "taskbox",
-    title: "TaskBox",
+    id: "Baharnani-Exhibition-stand",
+    title: "Baharnani Exhibition stand",
     period: {
-      start: "07.2023",
-      end: "07.2023",
+      start: "11.2025",
     },
-    link: "https://github.com/ncdai/taskbox",
+    link: "https://baharnani-exhibition-stands.vercel.app/",
     skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Swiper",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "React Router",
+      "SEO",
+      "Responsive",
+      "React Helmet",
+      "React Icons",
+      "React Router",
+      "React Hook Form",
+      "React Toastify",
     ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/taskbox",
+    description: `**Baharnani Exhibition stand** is a multipage website for an event management company showcasing various services.
+
+- Showcases various services from corporate event management to exhibitions stand and printing
+- Portfolio section to showcase previous works and completed projects
+- Features multiple service pages with detailed descriptions
+- Built with React, TypeScript, Vite, Swiper, shadcn/ui, and Tailwind CSS
+- React Router for multipage navigation
+- React Helmet for SEO optimization
+- React Hook Form and React Toastify for form handling and notifications
+- Clean, responsive UI with SEO-friendly design`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
+  // Baharnani Corporate gifts  Project
   {
-    id: "daichat-app",
-    title: "DaiChat App",
+    id: "Baharnani-Corporate-gifts",
+    title: "Baharnani Corporate Gifts",
     period: {
-      start: "07.2020",
-      end: "07.2020",
+      start: "10.2025",
     },
-    link: "https://www.youtube.com/watch?v=H5U3J_W1low",
-    skills: ["University Project", "Java", "Java Swing", "Java Networking"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Developed a real-time chat application using Java technologies
-- Project Score: 10/10
-- Source Code:
-  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server
-  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client`,
-  },
-  {
-    id: "qlsv-app",
-    title: "QLSV App",
-    period: {
-      start: "06.2020",
-      end: "06.2020",
-    },
-    link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
-    skills: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Built a student management system with role-based functionalities using Java technologies
-- Project Score: 10/10
-- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate`,
-  },
-  {
-    id: "penphy",
-    title: "Penphy",
-    period: {
-      start: "01.2019",
-      end: "08.2019",
-    },
-    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    skills: ["Startup Project", "JavaScript", "React Native"],
-    description: "2nd Prize — Business Startup Competition 2019",
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
+    link: "https://baharnani-corporate-gifts.vercel.app/",
     skills: [
-      "National Competition",
-      "Creative Software",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Swiper",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "React Router",
+      "SEO",
+      "Responsive",
+      "React Helmet",
+      "React Icons",
+      "React Router",
+      "React Hook Form",
+      "React Toastify",
+    ],
+    description: `**Baharnani Corporate Gifts** is a multipage website showcasing corporate gift products and services.
+
+- Features product catalog showcasing various corporate gift options
+- Add to cart functionality for seamless product selection
+- Quote system integrated for service inquiries
+- Lead generation forms for customer engagement
+- Built with React, TypeScript, Vite, Swiper, shadcn/ui, and Tailwind CSS
+- React Router for multipage navigation
+- React Helmet for SEO optimization
+- React Hook Form and React Toastify for form handling and notifications
+- Completely responsive and SEO-friendly design`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+  },
+  // 3d map Project
+  {
+    id: "3d-map",
+    title: "RIT 3D Map",
+    period: {
+      start: "09.2025",
+    },
+    link: "https://3dmap-nine.vercel.app/",
+    skills: [
+      "React",
+      "TypeScript",
+      "React Three Fiber",
+      "Swiper",
+      "Electron.js",
+      "Touch Screen",
+      "Event Tech",
+      "Web Application",
+    ],
+    description: `**RIT 3D Map** is a 3D interactive map built with React, React Three Fiber, and Electron.js to show RIT campus.
+
+- Users can select any building or room to get information about that building and room
+- Get images, details, and more information about selected locations
+- Touch screen interface for interactive navigation
+- Perfect for tech events and promotion events
+- Web application optimized for event engagement`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+  },
+  // ai photo booth Project
+  {
+    id: "ai-photo-booth",
+    title: "AI Photo Booth",
+    period: {
+      start: "08.2025",
+    },
+    link: "https://ai-photo-generator-kappa.vercel.app/",
+    skills: [
+      "React",
+      "React Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "Ai",
+      "API",
+      "Printnode",
+      "For Kiosk",
+      "Virtical Touch screen",
+      "Camera",
+      "Printer",
+      "Raspberry Pi",
+      "React Icons",
+    ],
+    description: `**AI Photo Booth** is a React web application made for event engagement and interaction.
+
+- Perfect fun interaction for any event
+- Touch screen interface designed for kiosk use
+- Camera integration for photo capture
+- Users capture a photo then select an avatar
+- AI transforms the captured image into the selected avatar
+- Instant printing through Printnode connected with a printer
+- Vertical touch screen optimized for kiosk experience`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+  },
+  // Himalaya Puzzle Game Project
+  {
+    id: "Himalaya-Puzzle-Game",
+    title: "Himalaya Puzzle Game",
+    period: {
+      start: "07.2025",
+    },
+    link: "https://himalaya-puzzle-game.vercel.app/",
+    skills: ["HTML", "CSS", "JavaScript", "jQuery", "AJAX", "For Tablet"],
+    description: `**Himalaya Puzzle Game** is a jigsaw puzzle game web application made for a Himalaya brand event.
+
+- Users have to solve the puzzle under the given time
+- Made for tablet only
+- Built with HTML, CSS, JavaScript, jQuery, and AJAX
+- Interactive gameplay focused on user engagement`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
+  },
+  // Baharnani av landing Project
+  {
+    id: "Baharnani-av-landing",
+    title: "Baharnani av landing",
+    period: {
+      start: "06.2025",
+    },
+    link: "https://baharnani-av-landing.vercel.app/",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "PHP",
-      "Laravel 4",
       "MySQL",
+      "Bootstrap",
+      "PHPMailer",
       "jQuery",
-      "Bootstrap 3",
+      "AJAX",
+      "SEO",
+      "Responsive",
     ],
-    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
-- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 1st Prize — Can Tho City Science and Engineering Fair 2018
-- 3rd Prize — National Young Informatics Contest 2018
-- 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
-- 3rd Prize — Can Tho City Young Informatics Contest 2018
-- Reached 7k+ users, mainly high school students in Can Tho City
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
-    logo: "https://assets.chanhdai.com/images/project-logos/unlimitedstudy.webp",
-  },
-  {
-    id: "dmessage",
-    title: "DMessage",
-    period: {
-      start: "05.2017",
-      end: "05.2017",
-    },
-    link: "https://github.com/ncdai/DMessage",
-    skills: [
-      "Self-learning Project",
-      "Pet Project",
-      "Express.js",
-      "Socket.io",
-      "MongoDB",
-      "Mongoose ODM",
-    ],
-    description:
-      "A Messenger clone built to practice real-time communication using Socket.IO. This project showcases my self-learning journey in implementing WebSockets for instant messaging.",
-  },
-  {
-    id: "study-english",
-    title: "Study English",
-    period: {
-      start: "11.2016",
-      end: "12.2017",
-    },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-    ],
-    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
-- Consolation Prize — National Youth and Children's Creativity Contest 2016
-- 1st Prize — Can Tho City Youth and Children's Creativity Contest 2016
-- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
+    description: `**Baharnani av landing** is a lead generation landing page for Baharnani audio video rental services.
+
+- Lead generation webpage designed to capture customer inquiries
+- Built with HTML, CSS, Bootstrap, PHP, JavaScript, and jQuery
+- Super clean and minimal design for optimal user experience
+- Completely responsive and SEO-friendly design
+- Modern, accessible layout focused on conversion`,
+    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
   },
 ];

@@ -1,6 +1,7 @@
 import { FlipSentences } from "@/components/flip-sentences";
 import { USER } from "@/features/portfolio/data/user";
 
+import { PronounceMyName } from "./pronounce-my-name";
 import { VerifiedIcon } from "./verified-icon";
 
 export function ProfileHeader() {
@@ -17,7 +18,7 @@ export function ProfileHeader() {
         </div>
 
         <a
-          href="https://www.india.gov.in/about-us"
+          href="https://en.wikipedia.org/wiki/India"
           target="_blank"
           rel="noreferrer"
           className="absolute top-0 -left-px"
@@ -50,6 +51,11 @@ export function ProfileHeader() {
             <VerifiedIcon
               className="size-4.5 text-info select-none"
               aria-label="Verified"
+            />
+
+            <PronounceMyName
+              namePronunciationUrl={USER.namePronunciationUrl}
+              className="-translate-y-px"
             />
           </div>
 
