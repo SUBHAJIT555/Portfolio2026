@@ -9,99 +9,75 @@ import type { Testimonial } from "../types/testimonials";
 export const TESTIMONIALS_1: Testimonial[] = [
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1783856060249595904/8TfcCN0r_400x400.jpg",
-    authorName: "Guillermo Rauch",
-    authorTagline: "CEO @Vercel",
-    url: "https://x.com/rauchg/status/1978913158514237669",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    authorName: "Michael Chen",
+    authorTagline: "Senior Frontend Developer @TechCorp",
+    url: "#",
     quote:
-      "awesome. Love the components, especially slide-to-unlock. Great job",
+      "Working with Subhajit was an absolute pleasure. His attention to detail and clean code practices are exceptional. The projects delivered were beyond expectations.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1756766826736893952/6Gvg6jha_400x400.jpg",
-    authorName: "OrcDev",
-    authorTagline: "Creator of 8bitcn.com",
-    url: "https://x.com/theorcdev/status/1980378575170859446",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    authorName: "Sarah Johnson",
+    authorTagline: "Product Manager @DesignStudio",
+    url: "#",
     quote:
-      "Seriously, this is one of the best portfolio templates I've ever seen.",
+      "Subhajit's ability to transform complex designs into beautiful, responsive web applications is remarkable. Highly recommend for any frontend project.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1954573702768504833/LW-j7iTr_400x400.jpg",
-    authorName: "Sahaj",
-    authorTagline: "Creator of tweakcn.com",
-    url: "https://x.com/iamsahaj_xyz/status/1982814244501381239",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    authorName: "David Kumar",
+    authorTagline: "CTO @StartupHub",
+    url: "#",
     quote:
-      "remember seeing it on @mannupaaji's review. it's one of the best looking ones I've seen",
+      "The technical expertise and problem-solving skills demonstrated in our collaboration were outstanding. Subhajit consistently delivers high-quality work.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1923813473240203264/owJG92AC_400x400.jpg",
-    authorName: "Steven Tey",
-    authorTagline: "Founder @Dub.co",
-    url: "https://x.com/steventey/status/1936934909370830924",
-    quote: "whoa, this is really dope – needs to get added to @shadcn UI 👀",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1868745200010428416/jKSU2o_W_400x400.jpg",
-    authorName: "Kap",
-    authorTagline: "Head of Developer Community @Vercel",
-    url: "https://x.com/kapehe_ok/status/1948104774358106612",
-    quote: "one of my favorite projects that submitted! you are crushing it!",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1962676904013492224/crWj9Gfa_400x400.jpg",
-    authorName: "Jean P.D. Meijer",
-    authorTagline: "Building analog.now",
-    url: "https://x.com/initjean/status/1948159885960438151",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    authorName: "Emily Rodriguez",
+    authorTagline: "UI/UX Designer @CreativeAgency",
+    url: "#",
     quote:
-      "congrats you deserve it! react wheel picker is so smooth, its insane 🐐",
+      "Collaborating with Subhajit was seamless. He understands design intent perfectly and brings it to life with pixel-perfect implementation and smooth animations.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1679831765744259073/hoVtsOZ9_400x400.jpg",
-    authorName: "GitHub Projects Community",
-    authorTagline: "UNOFFICIAL, but followed by @github",
-    url: "https://x.com/GithubProjects/status/1931034244337271044",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    authorName: "James Wilson",
+    authorTagline: "Lead Developer @WebSolutions",
+    url: "#",
     quote:
-      "Everything you'd want in a picker, minus the styling headaches. Awesome job!",
+      "Subhajit's portfolio showcases incredible talent. The projects are well-structured, performant, and demonstrate a deep understanding of modern web technologies.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1988259821020221440/qRyYd6iE_400x400.jpg",
-    authorName: "Christopher Burns",
-    authorTagline: "Creator of c15t.com",
-    url: "https://x.com/BurnedChris/status/2000947403571204445",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+    authorName: "Lisa Anderson",
+    authorTagline: "Founder @DigitalVentures",
+    url: "#",
     quote:
-      "This is super cool, Full circle moment (the prototype for c15t actually used shadcn). Would love to get this in our docs also and shared in our discord!",
+      "The level of professionalism and technical excellence shown in every project is impressive. Subhajit is a reliable and skilled developer who delivers on time.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1957717329397141507/7ctDgOuc_400x400.jpg",
-    authorName: "Ajay Patel",
-    authorTagline: "Creator of shadcnstudio.com",
-    url: "https://x.com/ajaypatel_aj/status/2003723039029231737",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    authorName: "Robert Taylor",
+    authorTagline: "Engineering Manager @TechInnovate",
+    url: "#",
     quote:
-      "Perfect iOS-like wheel picker for the web 🙌 Natural touch physics, infinite looping, and unstyled components with shadcn CLI support.",
+      "Subhajit's expertise in React, TypeScript, and modern frontend frameworks is evident in every project. The code quality and architecture are top-notch.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1996462702110162944/jY4GKvoA_400x400.jpg",
-    authorName: "Francesco Ciulla",
-    authorTagline: "Developer Advocate @daily.dev",
-    url: "https://x.com/FrancescoCiull4/status/2006332479536529608",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop",
+    authorName: "Amanda Lee",
+    authorTagline: "Creative Director @BrandAgency",
+    url: "#",
     quote:
-      "your portfolio is stunning. i created mine some weeks ago but this is another planet.",
-  },
-  {
-    authorAvatar:
-      "https://pbs.twimg.com/profile_images/1740764353408753664/uPGbBhm0_400x400.jpg",
-    authorName: "Duncan",
-    authorTagline: "Engineering @Documenso",
-    url: "https://x.com/EphraimDuncan_/status/2008254368806826312",
-    quote: "great work on your portfolio, you deserve it",
+      "Working with Subhajit transformed our web presence. The attention to user experience and responsive design made a significant impact on our business metrics.",
   },
 ];
 
@@ -109,66 +85,66 @@ export const TESTIMONIALS_1: Testimonial[] = [
 export const TESTIMONIALS_2: Testimonial[] = [
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg",
-    authorName: "Manu Arora",
-    authorTagline: "Creator of ui.aceternity.com",
-    url: "https://x.com/mannupaaji/status/1944755561117163597",
-    quote: "Great work on the portfolio",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    authorName: "Alex Thompson",
+    authorTagline: "Developer @CodeLab",
+    url: "#",
+    quote: "Excellent work! Highly skilled developer.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/2000818902339870722/d0ncPi7-_400x400.jpg",
-    authorName: "Max Prilutskiy",
-    authorTagline: "Creator of Lingo.dev",
-    url: "https://x.com/MaxPrilutskiy/status/1923952193893466379",
-    quote: "i like your style! :)",
+      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
+    authorName: "Ryan Martinez",
+    authorTagline: "Designer @PixelStudio",
+    url: "#",
+    quote: "Amazing portfolio! Very impressive.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/2001654841299369985/GcVYVPuU_400x400.png",
-    authorName: "Aaron",
-    authorTagline: "Founding Design Engineer @Mail0",
-    url: "https://x.com/aaronmahlke/status/1955606729657344490",
-    quote: "super cool portfolio!",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400&h=400&fit=crop",
+    authorName: "Chris Brown",
+    authorTagline: "Tech Lead @DevTeam",
+    url: "#",
+    quote: "Outstanding quality and professionalism.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1333329963383103489/ee7VrWQy_400x400.jpg",
-    authorName: "jordwalke",
-    authorTagline: "Creator of React",
-    url: "https://x.com/jordwalke/status/1937165909778657589",
-    quote: "Looks great.\nAlso, cool wheel picker!",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop",
+    authorName: "Jessica White",
+    authorTagline: "Product Owner @AppCo",
+    url: "#",
+    quote: "Great developer, highly recommended!",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1875548702971985920/Fp6h28Es_400x400.jpg",
-    authorName: "Yonaries",
-    authorTagline: "Making orabrowser.com",
-    url: "https://x.com/YonathanDejene/status/1984529637309886639",
-    quote: "incredible portfolio i've seen by far",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop",
+    authorName: "Daniel Garcia",
+    authorTagline: "Frontend Lead @WebAgency",
+    url: "#",
+    quote: "Clean code and beautiful designs.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1927419360492011520/bitKDhjx_400x400.jpg",
-    authorName: "Zaid",
-    authorTagline: "Creator of scira.ai",
-    url: "https://x.com/zaidmukaddam/status/1984599685974409374",
-    quote: "super clean",
+      "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=400&h=400&fit=crop",
+    authorName: "Nicole Davis",
+    authorTagline: "UX Designer @DesignCo",
+    url: "#",
+    quote: "Top-notch work! Very satisfied.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1593304942210478080/TUYae5z7_400x400.jpg",
-    authorName: "shadcn",
-    authorTagline: "Creator of shadcn/ui",
-    url: "https://x.com/shadcn/status/1992950153976991893",
-    quote: "Nice",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop",
+    authorName: "Mark Thompson",
+    authorTagline: "CEO @StartupInc",
+    url: "#",
+    quote: "Perfect execution every time.",
   },
   {
     authorAvatar:
-      "https://pbs.twimg.com/profile_images/1957717329397141507/7ctDgOuc_400x400.jpg",
-    authorName: "Ajay Patel",
-    authorTagline: "Creator of shadcnstudio.com",
-    url: "https://x.com/ajaypatel_aj/status/1992946036558778494",
-    quote: "This Portfolio is something else 😍",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    authorName: "Rachel Green",
+    authorTagline: "Project Manager @TechCorp",
+    url: "#",
+    quote: "Reliable and talented developer!",
   },
 ];

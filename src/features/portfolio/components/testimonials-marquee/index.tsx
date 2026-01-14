@@ -24,9 +24,9 @@ export function TestimonialsMarquee() {
         <MarqueeContent>
           {TESTIMONIALS_1.slice()
             .sort((a, b) => a.authorName.localeCompare(b.authorName))
-            .map((item) => (
+            .map((item, index) => (
               <MarqueeItem
-                key={item.url}
+                key={`${item.authorName}-${index}`}
                 className="mx-0 h-full w-xs border-r border-edge"
               >
                 <TestimonialItem {...item} />
@@ -44,9 +44,9 @@ export function TestimonialsMarquee() {
         <MarqueeContent direction="right">
           {TESTIMONIALS_2.slice()
             .sort((a, b) => a.authorName.localeCompare(b.authorName))
-            .map((item) => (
+            .map((item, index) => (
               <MarqueeItem
-                key={item.url}
+                key={`${item.authorName}-${index}`}
                 className="mx-0 h-full w-xs border-r border-edge"
               >
                 <TestimonialItem {...item} />
