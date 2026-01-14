@@ -325,8 +325,8 @@ export const EXPERIENCES: Experience[] = [
           start: "2018",
           end: "2021",
         },
-        score: "8.10/10",
-        scoreType: "CGPA",
+        score: "82.3/100",
+        scoreType: "Percentage",
         icon: "education",
         description: `- Completed Bachelor of Technology (B.Tech) in Computer Science & Engineering with a CGPA of 8.10/10.
 - Studied core computer science subjects including data structures, algorithms, database management systems, software engineering, and computer networks.

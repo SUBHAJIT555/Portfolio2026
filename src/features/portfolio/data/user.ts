@@ -36,27 +36,27 @@ export const USER = {
 **Web Developer** specializing in **Frontend Development** with **2+ years of professional experience**. 
 
 **Education:**
-- **M.Tech** in Computer Science and Engineering (2021-2023)
-- **B.Tech** in Computer Science and Engineering (2018-2021)
+- **Master of Technology** in Computer Science and Engineering (2021-2023)
+- **Bachelor of Technology** in Computer Science and Engineering (2018-2021)
 
 
-**Current Role:**
-- **Frontend Developer** at **Baharnani Advertising LLC** — building modern, responsive web applications and user interfaces
-- **Server maintenance** and infrastructure management
-- **Mail services** administration and maintenance
-- **Deployment and hosting** of web applications and services
-- **Kiosk games** development for corporate events
-- **3D interactive games** for exhibition stands and trade shows
+**Current Role & Responsibilities:**
+- **Web Developer** at **[Baharnani Advertising LLC](https://baharnani.com)** — building modern, responsive web applications, user interfaces, and event tech.
+- **Server maintenance** and infrastructure management.
+- **Mail services** administration and maintenance.
+- **Deployment and hosting** of web applications and services.
+- **Kiosk games** development for corporate events.
+- **3D interactive games** for exhibition stands and trade shows.
 
 **Technical Expertise:**
-- **React**, **TypeScript**, **JavaScript**, **Node.js**, **Framer Motion**, **Three.js**, **Tailwind CSS**, **Shadcn/ui**, **npm** / **yarn**, **Vite** / **Next.js**, and modern frontend libraries
-- **Tools & Technologies**: **Git** / **GitHub**, **VS Code** / **Cursor**,  **Docker**, **Postman**, **Chrome DevTools** , **▲Vercel** / **Netlify**
-- Creating **responsive**, **performant**, and **visually engaging** web experiences
-- Strong foundation in **computer science fundamentals** with advanced postgraduate knowledge
+- React, TypeScript, JavaScript, Node.js, Framer Motion, Three.js, Tailwind CSS, Shadcn/ui, npm / yarn, Vite / Next.js, and modern frontend libraries.
+- Tools & Technologies: Git / GitHub, VS Code / Cursor,  Docker, Postman, Chrome DevTools , ▲Vercel / Netlify.
+- Creating **responsive**, **performant**, and **visually engaging** web experiences.
+- Strong foundation in **computer science fundamentals** with advanced postgraduate knowledge.
 
 **Approach:**
-- Focused on **continuous learning** and staying current with frontend technologies
-- Passionate about solving **complex UI/UX challenges** and transforming designs into interactive applications
+- Focused on **continuous learning** and staying current with frontend technologies.
+- Passionate about solving **complex UI/UX challenges** and transforming designs into interactive applications.
 `,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage:
