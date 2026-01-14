@@ -30,9 +30,9 @@ export const MAIN_NAV: NavItem[] = [
 ];
 
 export const GITHUB_USERNAME = "SUBHAJIT555";
-export const SOURCE_CODE_GITHUB_REPO = "subhajit555/Portfolio2026";
+export const SOURCE_CODE_GITHUB_REPO = "subhajit555/minimal-portfolio";
 export const SOURCE_CODE_GITHUB_URL =
-  "https://github.com/SUBHAJIT555/Portfolio2026";
+  "https://github.com/SUBHAJIT555/minimal-portfolio";
 
 export const SPONSORSHIP_URL = "https://github.com/SUBHAJIT555";
 
