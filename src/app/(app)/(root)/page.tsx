@@ -1,8 +1,8 @@
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
 import { About } from "@/features/portfolio/components/about";
-import { Awards } from "@/features/portfolio/components/awards";
-import { Certifications } from "@/features/portfolio/components/certifications";
+// import { Awards } from "@/features/portfolio/components/awards";
+// import { Certifications } from "@/features/portfolio/components/certifications";
 import { ContactForm } from "@/features/portfolio/components/contact-form";
 import { Experiences } from "@/features/portfolio/components/experiences";
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions";
@@ -55,11 +55,11 @@ export default function Page() {
         <Projects />
         <Separator />
 
-        <Awards />
+        {/* <Awards />
         <Separator />
 
         <Certifications />
-        <Separator />
+        <Separator /> */}
 
         <ContactForm />
         <Separator />
