@@ -1,7 +1,7 @@
 {
-  "name": "ncdai",
+  "name": "subhajit-dhali",
   "version": "0.0.3",
-  "description": "A simple CLI wrapper for adding components from chanhdai.com component registry using shadcn.",
+  "description": "A simple CLI wrapper for adding components from subhajit-dhali.vercel.app component registry using shadcn.",
   "publishConfig": {
     "access": "public"
   },
@@ -24,23 +24,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ncdai",
+    "subhajit-dhali",
     "cli",
     "shadcn",
     "components",
     "registry"
   ],
-  "author": "Nguyen Chanh Dai <dai@chanhdai.com>",
+  "author": "Subhajit Dhali <subhajitdhali0@gmail.com>",
   "license": "MIT",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://subhajit-dhali.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git",
+    "url": "git+https://github.com/subhajit555/Portfolio2026.git",
     "directory": "packages/ncdai"
   },
-  "funding": "https://github.com/sponsors/ncdai",
+  "funding": "https://github.com/subhajit555",
   "bugs": {
-    "url": "https://github.com/ncdai/chanhdai.com/issues"
+    "url": "https://github.com/subhajit555/Portfolio2026/issues"
   },
   "devDependencies": {
     "tsup": "^8.5.0"
