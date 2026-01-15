@@ -12,7 +12,7 @@ export function ProfileHeader() {
           <img
             className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
             alt={`${USER.displayName}'s avatar`}
-            src="https://wallpapercave.com/wp/wp14923758.webp"
+            src="/assets/image/sdp.png"
             fetchPriority="high"
           />
         </div>
