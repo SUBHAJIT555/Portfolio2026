@@ -87,6 +87,8 @@ export function TeckStack() {
         <PanelTitle>Stack</PanelTitle>
       </PanelHeader>
 
+      {/* Tech stact container  */}
+
       <PanelContent
         className={cn(
           "[--pattern-foreground:var(--color-zinc-950)]/8 dark:[--pattern-foreground:var(--color-white)]/5",
