@@ -1,4 +1,4 @@
-import { BoxIcon, InfinityIcon, LinkIcon } from "lucide-react";
+import { BoxIcon, LinkIcon } from "lucide-react";
 import Image from "next/image";
 
 import { Markdown } from "@/components/markdown";
@@ -66,20 +66,10 @@ export function ProjectItem({
                   <dt className="sr-only">Period</dt>
                   <dd className="flex items-center gap-0.5">
                     <span>{start}</span>
-                    {!isSinglePeriod && (
+                    {!isSinglePeriod && !isOngoing && (
                       <>
                         <span className="font-mono">—</span>
-                        {isOngoing ? (
-                          <>
-                            <InfinityIcon
-                              className="size-4.5 translate-y-[0.5px]"
-                              aria-hidden
-                            />
-                            <span className="sr-only">Present</span>
-                          </>
-                        ) : (
-                          <span>{end}</span>
-                        )}
+                        <span>{end}</span>
                       </>
                     )}
                   </dd>

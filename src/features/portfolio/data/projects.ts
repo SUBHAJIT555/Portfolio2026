@@ -1,6 +1,35 @@
 import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
+  //Quartz Landing Page
+  {
+    id: "Quartz Educational Advisory",
+    title: "Quartz Educational Advisory",
+    period: {
+      start: "04.2026",
+    },
+    link: "https://qf-advisory.com/",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Three.js",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Tailwind CSS",
+      "yarn",
+      "shadcn/ui",
+    ],
+    description: `**Quartz Educational Advisory** is a comprehensive educational advisory platform offering multiple dynamic services and courses.
+
+- Full singlepage application showcasing educational advisory services for trading and financial markets
+- Built with Next.js, Three.js, and Tailwind CSS for a clean, modern look
+- Completely responsive and SEO-friendly design
+- Modern, accessible design with user-focused layout
+`,
+    logo: "/icon/quartz_icon.webp",
+    isExpanded: true,
+  },
   // cyberlabs India Project
   {
     id: "Cyberlabs-India",
@@ -32,7 +61,7 @@ export const PROJECTS: Project[] = [
 - Modern, accessible design with user-focused layout
 `,
     logo: "/icon/cyberlabs.svg",
-    isExpanded: true,
+    isExpanded: false,
   },
   // Kalal Creation Project
   {
@@ -66,6 +95,33 @@ export const PROJECTS: Project[] = [
 - Modern, accessible layout focused on user experience
 `,
     logo: "/icon/kalalcreation.svg",
+  },
+  // Baharnani AV Rental Project
+  {
+    id: "Baharnani AV Rental",
+    title: "Baharnani AV Rental",
+    period: {
+      start: "04.2025",
+    },
+    link: "https://baharnani-av-landing.vercel.app/",
+    skills: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "GSAP",
+      "Locomotive Scroll",
+      "JavaScript",
+    ],
+    description: `**Baharnani AV Rental** is an interactive website for an audio-visual rental company, providing users with a seamless and modern browsing experience.
+
+- Built with HTML, CSS, and Bootstrap for a fully responsive interface
+- GSAP ScrollTrigger powers scroll-based animations and interactivity throughout the site
+- Locomotive Scroll ensures buttery smooth scrolling for enhanced navigation
+- Supports both dark and light mode for optimal accessibility and user preference
+- Completely responsive and SEO-friendly design
+- Modern, accessible layout focused on user experience
+`,
+    logo: "/icon/baharnani.webp",
   },
   // Groassets Project
   {

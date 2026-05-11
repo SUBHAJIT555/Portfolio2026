@@ -3,12 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import {
-  TooltipContent,
-  TooltipProvider,
-  TooltipRoot,
-  TooltipTrigger,
-} from "@/components/base/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 import { TECH_STACK } from "../data/tech-stack";
@@ -52,7 +46,7 @@ function TechIcon({
     return (
       <div
         className={cn(
-          "flex h-8 w-8 items-center justify-center rounded bg-zinc-200 text-sm font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
+          "flex size-4 items-center justify-center rounded bg-zinc-200 text-[10px] font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
           className
         )}
       >
@@ -67,8 +61,8 @@ function TechIcon({
       <Image
         src={getIconUrl(tech.key, false)}
         alt={`${tech.title} icon`}
-        width={32}
-        height={32}
+        width={16}
+        height={16}
         className={cn("block dark:hidden", className)}
         unoptimized
         onError={() => setError(true)}
@@ -76,8 +70,8 @@ function TechIcon({
       <Image
         src={getIconUrl(tech.key, true)}
         alt={`${tech.title} icon`}
-        width={32}
-        height={32}
+        width={16}
+        height={16}
         className={cn("hidden dark:block", className)}
         unoptimized
         onError={() => setError(true)}
@@ -88,46 +82,44 @@ function TechIcon({
 
 export function TeckStack() {
   return (
-    <Panel id="stack">
+    <Panel id="stack" className="border-b border-edge">
       <PanelHeader>
         <PanelTitle>Stack</PanelTitle>
       </PanelHeader>
 
       <PanelContent
         className={cn(
-          "[--pattern-foreground:var(--color-zinc-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5",
+          "[--pattern-foreground:var(--color-zinc-950)]/8 dark:[--pattern-foreground:var(--color-white)]/5",
           "bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center",
-          "bg-zinc-950/0.75 dark:bg-white/0.75"
+          "bg-background/95 dark:bg-zinc-950/75"
         )}
       >
-        <TooltipProvider>
-          <ul className="flex flex-wrap gap-4 select-none">
-            {TECH_STACK.map((tech) => {
-              return (
-                <li key={tech.key} className="flex">
-                  <TooltipRoot>
-                    <TooltipTrigger
-                      render={
-                        <a
-                          href={tech.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={tech.title}
-                        />
-                      }
-                    >
-                      <TechIcon tech={tech} />
-                    </TooltipTrigger>
-
-                    <TooltipContent>
-                      <p>{tech.title}</p>
-                    </TooltipContent>
-                  </TooltipRoot>
-                </li>
-              );
-            })}
-          </ul>
-        </TooltipProvider>
+        <ul className="flex flex-wrap gap-2 select-none">
+          {TECH_STACK.map((tech) => {
+            return (
+              <li key={tech.key} className="flex">
+                <a
+                  href={tech.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={tech.title}
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.95rem] leading-none",
+                    "border-zinc-200/90 bg-white text-zinc-900 shadow-xs",
+                    "transition-colors hover:border-zinc-300 hover:bg-zinc-50",
+                    "dark:border-white/10 dark:bg-black/45 dark:text-white/95 dark:shadow-none",
+                    "dark:hover:border-white/20 dark:hover:bg-black/60"
+                  )}
+                >
+                  <TechIcon tech={tech} className="size-4 shrink-0" />
+                  <span className="font-medium whitespace-nowrap">
+                    {tech.title}
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </PanelContent>
     </Panel>
   );
