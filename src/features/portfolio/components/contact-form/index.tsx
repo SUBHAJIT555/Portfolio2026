@@ -15,11 +15,14 @@ export function ContactForm() {
     email: "",
     phone: "",
     projectIdea: "",
+    /** Honeypot — leave blank; do not remove. */
+    website: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errorHint, setErrorHint] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,19 +35,56 @@ export function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setErrorHint(null);
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 25_000);
 
     try {
-      // TODO: Replace with your form submission endpoint
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+        signal: controller.signal,
+      });
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (!response.ok) {
+        let hint: string | null = null;
+        try {
+          const body = (await response.json()) as {
+            error?: string;
+            missing?: string[];
+          };
+          if (body.missing?.length) {
+            hint = `Set in .env.local (project root), then restart dev: ${body.missing.join(", ")}`;
+          } else if (response.status === 429) {
+            hint = "Too many submissions. Please wait and try again.";
+          } else if (body.error) {
+            hint = body.error;
+          }
+        } catch {
+          // ignore JSON parse errors
+        }
+        setErrorHint(hint);
+        setSubmitStatus("error");
+        return;
+      }
 
       setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", projectIdea: "" });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        projectIdea: "",
+        website: "",
+      });
     } catch {
       setSubmitStatus("error");
+      setErrorHint(
+        "Network error or request timed out. Check your connection and try again."
+      );
     } finally {
+      window.clearTimeout(timeoutId);
       setIsSubmitting(false);
     }
   };
@@ -56,7 +96,23 @@ export function ContactForm() {
       </PanelHeader>
 
       <PanelContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="relative space-y-4">
+          <div
+            className="pointer-events-none absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
+            aria-hidden="true"
+          >
+            <label htmlFor="contact-website">Company website</label>
+            <input
+              id="contact-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={formData.website}
+              onChange={handleChange}
+            />
+          </div>
+
           <div className="space-y-2">
             <label
               htmlFor="name"
@@ -144,7 +200,10 @@ export function ContactForm() {
 
           {submitStatus === "error" && (
             <div className="rounded-md border border-red-500/30 bg-red-500/5 px-3 py-2 text-sm text-red-600 dark:text-red-400">
-              Something went wrong. Please try again later.
+              <p>Something went wrong. Please try again later.</p>
+              {errorHint ? (
+                <p className="mt-2 font-mono text-xs opacity-90">{errorHint}</p>
+              ) : null}
             </div>
           )}
 

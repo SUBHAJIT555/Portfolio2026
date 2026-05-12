@@ -30,7 +30,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Env / secrets — never commit. Set the same keys in Vercel → Project → Settings → Environment Variables.
+# (Never `git add -f .env.local`.) Covers .env, .env.local, .env.production, etc.
 .env*
 
 # vercel
