@@ -56,7 +56,15 @@ export function ContactForm() {
             missing?: string[];
           };
           if (body.missing?.length) {
-            hint = `Set in .env.local (project root), then restart dev: ${body.missing.join(", ")}`;
+            const host = window.location.hostname;
+            const isLocalDev =
+              host === "localhost" ||
+              host === "127.0.0.1" ||
+              host === "[::1]" ||
+              host.endsWith(".local");
+            hint = isLocalDev
+              ? `Set in .env.local (project root), then restart dev: ${body.missing.join(", ")}`
+              : `Missing on the server. In Vercel: Project → Settings → Environment Variables, add ${body.missing.join(", ")} (same values as .env.local), then Redeploy.`;
           } else if (response.status === 429) {
             hint = "Too many submissions. Please wait and try again.";
           } else if (body.error) {

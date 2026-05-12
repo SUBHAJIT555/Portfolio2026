@@ -52,9 +52,8 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error: "Contact form is not configured.",
-        ...(process.env.NODE_ENV === "development"
-          ? { missing: missingEnv }
-          : {}),
+        /** Key names only (no values); safe for production so owners can fix Vercel env. */
+        missing: missingEnv,
       },
       { status: 503 }
     );
