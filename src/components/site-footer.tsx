@@ -1,5 +1,6 @@
 import React from "react";
 
+import { FluidGradientText } from "@/components/fluid-gradient-text";
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links";
 import { cn } from "@/lib/utils";
@@ -77,8 +78,15 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+
+      <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 border-b border-edge bg-background">
+        <div className="relative h-40 w-full overflow-hidden text-foreground md:h-52">
+          <FluidGradientText text="subhajit" />
+        </div>
+      </div>
+
       <div className="pb-[env(safe-area-inset-bottom,0px)]">
-        <div className="flex h-2" />
+        <div className="flex h-15 md:h-30" />
       </div>
     </footer>
   );

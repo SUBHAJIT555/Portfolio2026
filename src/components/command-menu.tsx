@@ -184,7 +184,7 @@ export function CommandMenu() {
     <>
       <Button
         variant="secondary"
-        className="h-8 gap-1.5 rounded-md border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
+        className="h-8 gap-1.5 rounded-xl border border-input bg-white px-2.5 text-muted-foreground shadow-xs select-none hover:bg-white dark:bg-input/30 dark:hover:bg-input/30"
         onClick={() => {
           setOpen(true);
           trackEvent({
