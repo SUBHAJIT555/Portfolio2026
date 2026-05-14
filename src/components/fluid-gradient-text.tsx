@@ -59,11 +59,11 @@ export function FluidGradientText({
       >
         <text
           x="50%"
-          y="50%"
+          y="40%"
           textAnchor="middle"
           dominantBaseline="central"
           stroke="currentColor"
-          strokeOpacity="0.1"
+          strokeOpacity="0.15"
           strokeWidth="2"
           fill="url(#fluid_gradient_text_linear)"
           style={{
