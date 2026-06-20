@@ -39,16 +39,14 @@ export const PROJECTS: Project[] = [
     },
     link: "https://cyberlabs-india.vercel.app/",
     skills: [
-      "React",
+      "Next.js",
       "TypeScript",
-      "Vite",
       "Motion",
       "GSAP",
       "Lenis",
       "Tailwind CSS",
       "yarn",
       "shadcn/ui",
-      "React Router",
       "React Hook Form",
     ],
     description: `**Cyberlabs India** is a comprehensive cybersecurity training and learning platform offering multiple dynamic services and courses.
