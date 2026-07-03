@@ -2,7 +2,7 @@ import { ChevronDownIcon } from "lucide-react";
 import { Slot as SlotPrimitive } from "radix-ui";
 import React from "react";
 
-import { Button } from "@/components/ui/button";
+import { CandyButton } from "@/components/ui/candy-button";
 import {
   Collapsible,
   CollapsibleContent,
@@ -51,12 +51,9 @@ export function CollapsibleList<T>({
       </CollapsibleContent>
 
       {items.length > max && (
-        <div className="flex h-12 items-center justify-center pb-px">
+        <div className="flex items-center justify-center py-3">
           <CollapsibleTrigger asChild>
-            <Button
-              className="group/collapsible-trigger flex"
-              variant="default"
-            >
+            <CandyButton className="group/collapsible-trigger min-w-30 px-6">
               <span className="hidden group-data-[state=closed]/collapsible-trigger:block">
                 Show More
               </span>
@@ -69,7 +66,7 @@ export function CollapsibleList<T>({
                 className="group-data-[state=open]/collapsible-trigger:rotate-180"
                 aria-hidden
               />
-            </Button>
+            </CandyButton>
           </CollapsibleTrigger>
         </div>
       )}

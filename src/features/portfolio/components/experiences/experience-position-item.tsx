@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { Tag } from "@/components/ui/tag";
-import { ProseMono } from "@/components/ui/typography";
+import { Prose } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 
 import type { ExperiencePosition } from "../../types/experiences";
@@ -115,9 +115,9 @@ export function ExperiencePositionItem({
 
         <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
           {position.description && (
-            <ProseMono className="pt-2 pl-9">
+            <Prose className="pt-2 pl-9">
               <Markdown>{position.description}</Markdown>
-            </ProseMono>
+            </Prose>
           )}
         </CollapsibleContent>
 

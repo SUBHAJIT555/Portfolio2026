@@ -36,10 +36,12 @@ export function ThemeToggle() {
   return (
     <Tooltip>
       <TooltipTrigger
+        data-click-sound="off"
         render={
           <Button
             variant="ghost"
             size="icon"
+            data-click-sound="off"
             onClick={switchTheme}
             // onClick={() => {
             //   if (!document.startViewTransition) switchTheme();

@@ -20,14 +20,12 @@ export function Nav({
     >
       {items.map(({ title, href }) => {
         const hrefStr = String(href);
-        // Handle hash links for single-page navigation
         const isHashLink = hrefStr.startsWith("/#");
         const hashId = isHashLink ? hrefStr.substring(2) : null;
+        const hashHref = hashId ? `#${hashId}` : null;
 
         const active = isHashLink
-          ? hashId !== null &&
-            typeof window !== "undefined" &&
-            window.location.hash === `#${hashId}`
+          ? hashHref !== null && (activeId === hrefStr || activeId === hashHref)
           : activeId === hrefStr ||
             (hrefStr === "/" // Home page
               ? ["/", "/index"].includes(activeId || "")
@@ -61,8 +59,8 @@ export function NavItem({
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
-        // Update URL hash without triggering scroll
         window.history.pushState(null, "", `#${targetId}`);
+        window.dispatchEvent(new HashChangeEvent("hashchange"));
       }
     }
   };

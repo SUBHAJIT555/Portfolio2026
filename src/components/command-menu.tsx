@@ -3,7 +3,6 @@
 import { useCommandState } from "cmdk";
 import type { LucideProps } from "lucide-react";
 import {
-  AwardIcon,
   // BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
@@ -15,7 +14,6 @@ import {
   MoonStarIcon,
   // QuoteIcon,
   // RssIcon,
-  ShieldCheckIcon,
   SunMediumIcon,
   // TextIcon,
   TextInitialIcon,
@@ -113,6 +111,7 @@ export function CommandMenu() {
   const [open, setOpen] = useState(false);
 
   const playClick = useSound("/audio/ui-sounds/click.wav");
+  const playLinkClick = useSound("/audio/linkclick.wav");
 
   useHotkeys("mod+k, slash", (e) => {
     e.preventDefault();
@@ -134,6 +133,7 @@ export function CommandMenu() {
   const handleOpenLink = useCallback(
     (href: string, openInNewTab = false) => {
       setOpen(false);
+      playLinkClick(0.45);
 
       trackEvent({
         name: "command_menu_action",
@@ -150,7 +150,7 @@ export function CommandMenu() {
         router.push(href);
       }
     },
-    [router]
+    [playLinkClick, router]
   );
 
   const createThemeHandler = useCallback(

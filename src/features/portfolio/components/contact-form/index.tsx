@@ -2,10 +2,12 @@
 
 import { MailIcon, MessageSquareIcon, PhoneIcon, UserIcon } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
-import { Button } from "@/components/ui/button";
+import { CandyButton } from "@/components/ui/candy-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useSound } from "@/hooks/use-sound";
 
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "../panel";
 
@@ -23,6 +25,8 @@ export function ContactForm() {
     "idle" | "success" | "error"
   >("idle");
   const [errorHint, setErrorHint] = useState<string | null>(null);
+  const playMailSent = useSound("/audio/mailsend.wav");
+  const playError = useSound("/audio/error.wav");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -73,11 +77,19 @@ export function ContactForm() {
         } catch {
           // ignore JSON parse errors
         }
+        playError(0.55);
+        toast.error("Message not sent", {
+          description: hint ?? "Something went wrong. Please try again later.",
+        });
         setErrorHint(hint);
         setSubmitStatus("error");
         return;
       }
 
+      playMailSent(0.6);
+      toast.success("Message sent", {
+        description: "Thank you! Your message has been sent successfully.",
+      });
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -87,6 +99,11 @@ export function ContactForm() {
         website: "",
       });
     } catch {
+      playError(0.55);
+      toast.error("Message not sent", {
+        description:
+          "Network error or request timed out. Check your connection and try again.",
+      });
       setSubmitStatus("error");
       setErrorHint(
         "Network error or request timed out. Check your connection and try again."
@@ -124,7 +141,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="name"
-              className="flex items-center gap-2 font-mono text-sm font-medium text-muted-foreground"
+              className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
               <UserIcon className="size-4" />
               Full Name
@@ -144,7 +161,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="flex items-center gap-2 font-mono text-sm font-medium text-muted-foreground"
+              className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
               <MailIcon className="size-4" />
               Email ID
@@ -164,7 +181,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="phone"
-              className="flex items-center gap-2 font-mono text-sm font-medium text-muted-foreground"
+              className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
               <PhoneIcon className="size-4" />
               Phone Number
@@ -183,7 +200,7 @@ export function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="projectIdea"
-              className="flex items-center gap-2 font-mono text-sm font-medium text-muted-foreground"
+              className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
               <MessageSquareIcon className="size-4" />
               About Project Idea
@@ -216,11 +233,10 @@ export function ContactForm() {
           )}
 
           <div className="flex items-center justify-center pt-2">
-            <Button
+            <CandyButton
               type="submit"
               disabled={isSubmitting}
-              variant="default"
-              className="group/collapsible-trigger flex font-mono"
+              className="font-geist min-w-28 gap-2 px-6"
             >
               {isSubmitting ? (
                 <span>Sending...</span>
@@ -230,7 +246,7 @@ export function ContactForm() {
                   Submit
                 </>
               )}
-            </Button>
+            </CandyButton>
           </div>
         </form>
       </PanelContent>

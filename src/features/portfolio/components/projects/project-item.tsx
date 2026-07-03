@@ -14,7 +14,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ProseMono } from "@/components/ui/typography";
+import { Prose } from "@/components/ui/typography";
 import { UTM_PARAMS } from "@/config/site";
 import { addQueryParams } from "@/utils/url";
 
@@ -108,9 +108,9 @@ export function ProjectItem({
           <div className="border-t border-edge shadow-inner">
             <div className="space-y-4 p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
               {project.description && (
-                <ProseMono>
+                <Prose>
                   <Markdown>{project.description}</Markdown>
-                </ProseMono>
+                </Prose>
               )}
 
               {project.skills.length > 0 && (

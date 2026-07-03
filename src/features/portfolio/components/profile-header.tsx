@@ -1,4 +1,5 @@
 import { FlipSentences } from "@/components/flip-sentences";
+import { ShimmeringText } from "@/components/shimmering-text";
 import { USER } from "@/features/portfolio/data/user";
 
 import { PronounceMyName } from "./pronounce-my-name";
@@ -61,14 +62,20 @@ export function ProfileHeader() {
 
           <div className="h-12.5 border-t border-edge py-1 pl-4 sm:h-9">
             <FlipSentences
-              className="font-mono text-sm text-balance text-muted-foreground"
+              className="text-sm text-balance"
               variants={{
                 initial: { y: -10, opacity: 0 },
                 animate: { y: -1, opacity: 1 },
                 exit: { y: 10, opacity: 0 },
               }}
             >
-              {USER.flipSentences}
+              {USER.flipSentences.map((sentence) => (
+                <ShimmeringText
+                  key={sentence}
+                  text={sentence}
+                  className="font-mono text-sm text-muted-foreground"
+                />
+              ))}
             </FlipSentences>
           </div>
         </div>
