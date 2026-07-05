@@ -24,8 +24,16 @@ export const MAIN_NAV: NavItem[] = [
     href: "/#experience",
   },
   {
+    title: "Education",
+    href: "/#education",
+  },
+  {
     title: "Projects",
     href: "/#projects",
+  },
+  {
+    title: "Certifications",
+    href: "/#certs",
   },
 ];
 

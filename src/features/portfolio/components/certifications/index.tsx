@@ -1,8 +1,6 @@
-import { CollapsibleList } from "@/components/collapsible-list";
-
 import { CERTIFICATIONS } from "../../data/certifications";
 import { Panel, PanelHeader, PanelTitle, PanelTitleSup } from "../panel";
-import { CertificationItem } from "./certification-item";
+import { CertificationList } from "./certification-list";
 
 export function Certifications() {
   return (
@@ -14,11 +12,7 @@ export function Certifications() {
         </PanelTitle>
       </PanelHeader>
 
-      <CollapsibleList
-        items={CERTIFICATIONS}
-        max={8}
-        renderItem={(item) => <CertificationItem certification={item} />}
-      />
+      <CertificationList certifications={CERTIFICATIONS} />
     </Panel>
   );
 }

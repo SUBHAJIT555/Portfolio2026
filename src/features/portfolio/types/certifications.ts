@@ -2,6 +2,11 @@ export type Certification = {
   title: string;
   issuer: string;
   /**
+   * Certificate thumbnail or badge image.
+   * Provide an absolute URL or a path under /public.
+   */
+  imageURL?: string;
+  /**
    * Issuer logo to display (takes precedence over `issuerIconName`).
    * Provide an absolute URL or a path under /public.
    */

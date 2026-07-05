@@ -18,15 +18,24 @@ import { ExperienceIcon } from "./experience-position-icon";
 
 export function ExperiencePositionItem({
   position,
+  isLastInTimeline = false,
 }: {
   position: ExperiencePosition;
+  isLastInTimeline?: boolean;
 }) {
   const { start, end } = position.employmentPeriod;
   const isOngoing = !end;
 
   return (
     <CollapsibleWithContext defaultOpen={position.isExpanded} asChild>
-      <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
+      <div
+        className={cn(
+          "relative",
+          isLastInTimeline
+            ? "before:absolute before:top-6 before:bottom-0 before:left-3 before:w-px before:bg-background"
+            : "last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background"
+        )}
+      >
         <CollapsibleTrigger
           className={cn(
             "block w-full text-left",

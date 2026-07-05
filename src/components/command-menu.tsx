@@ -7,6 +7,7 @@ import {
   BoxIcon,
   BriefcaseBusinessIcon,
   CornerDownLeftIcon,
+  GraduationCapIcon,
   // DownloadIcon,
   // FileTextIcon,
   // HeartIcon,
@@ -39,6 +40,7 @@ import { useSound } from "@/hooks/use-sound";
 import { trackEvent } from "@/lib/events";
 
 import { Icons } from "./icons";
+import { CertificateIcon } from "./icons/certificate";
 import { SubhajitMark } from "./subhajit-mark";
 import { Button } from "./ui/button";
 import { Kbd, KbdGroup } from "./ui/kbd";
@@ -80,19 +82,24 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     icon: BriefcaseBusinessIcon,
   },
   {
+    title: "Education",
+    href: "/#education",
+    icon: GraduationCapIcon,
+  },
+  {
     title: "Projects",
     href: "/#projects",
     icon: BoxIcon,
+  },
+  {
+    title: "Certifications",
+    href: "/#certs",
+    icon: CertificateIcon,
   },
   // {
   //   title: "Honors & Awards",
   //   href: "/#awards",
   //   icon: AwardIcon,
-  // },
-  // {
-  //   title: "Certifications",
-  //   href: "/#certs",
-  //   icon: ShieldCheckIcon,
   // },
 ];
 
