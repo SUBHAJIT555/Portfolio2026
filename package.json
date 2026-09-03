@@ -22,6 +22,7 @@
   },
   "scripts": {
     "dev": "next dev -p 1408",
+    "dev:webpack": "next dev --webpack -p 1408",
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start -p 1408",

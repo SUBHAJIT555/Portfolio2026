@@ -236,7 +236,7 @@ export function ContactForm() {
             <CandyButton
               type="submit"
               disabled={isSubmitting}
-              className="font-geist min-w-28 gap-2 px-6"
+              className="min-w-28 px-6"
             >
               {isSubmitting ? (
                 <span>Sending...</span>

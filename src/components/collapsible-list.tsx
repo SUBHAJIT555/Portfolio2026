@@ -53,7 +53,7 @@ export function CollapsibleList<T>({
       {items.length > max && (
         <div className="flex items-center justify-center py-3">
           <CollapsibleTrigger asChild>
-            <CandyButton className="group/collapsible-trigger min-w-30 px-6">
+            <CandyButton className="group/collapsible-trigger min-w-30">
               <span className="hidden group-data-[state=closed]/collapsible-trigger:block">
                 Show More
               </span>

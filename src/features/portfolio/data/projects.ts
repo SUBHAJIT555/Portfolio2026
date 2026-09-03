@@ -61,6 +61,34 @@ export const PROJECTS: Project[] = [
     logo: "/icon/cyberlabs.svg",
     isExpanded: false,
   },
+  // FAB Spin The Wheel Project
+  {
+    id: "FAB-Spin-The-Wheel",
+    title: "FAB Spin The Wheel",
+    period: {
+      start: "02.2026",
+    },
+    link: "https://spinthewheel-next.vercel.app/",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "GSAP",
+      "Motion",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "yarn",
+    ],
+    description: `**FAB Spin The Wheel** is an interactive prize-wheel game built for First Abu Dhabi Bank gift giveaways at events.
+
+- Spin-to-win experience for FAB gift giveaways with animated wheel outcomes
+- Collects participant data for remarketing and follow-up campaigns
+- Stores lead and spin data in Supabase (PostgreSQL)
+- Smooth wheel and UI animations powered by GSAP and Motion
+- Built with Next.js, TypeScript, and Tailwind CSS
+- Designed for on-site engagement and brand activation events`,
+    logo: "/icon/fab.ico",
+  },
   //Quartz Landing Page
   {
     id: "Quartz Educational Advisory",
@@ -123,6 +151,39 @@ export const PROJECTS: Project[] = [
 `,
     logo: "/icon/codecobble.png",
   },
+  // Baharnani Advertising Project
+  {
+    id: "Baharnani-Advertising",
+    title: "Baharnani Advertising",
+    period: {
+      start: "12.2025",
+    },
+    link: "https://baharnani-adv.vercel.app/",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Swiper",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "SEO",
+      "Responsive",
+      "React Hook Form",
+      "React Toastify",
+      "Shaders",
+      "Motion",
+      "GSAP",
+    ],
+    description: `**Baharnani Advertising** is the main marketing site for Baharnani Advertising LLC in Dubai—exhibition stands, corporate gifts, print, and events under one roof.
+
+- Multipage site covering Home, About, Services, Categories, Blogs, and Contact
+- Service showcases for exhibition stands, corporate gifts, printing, acrylic fabrication, rider equipment, event management, and creative digital
+- Shader-driven visuals with Motion and GSAP scroll animations
+- Swiper carousels for stands, testimonials, and brand storytelling
+- Lead-gen quote flows with React Hook Form and React Toastify
+- Built with Next.js, TypeScript, shadcn/ui, and Tailwind CSS
+- Completely responsive and SEO-friendly design`,
+    logo: "/icon/baharnani.webp",
+  },
   // Baharnani Exhibition stand  Project
   {
     id: "Baharnani-Exhibition-stand",
@@ -130,7 +191,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "11.2025",
     },
-    link: "https://baharnani-exhibition-stand.vercel.app/",
+    link: "https://exhibitionstandsuae.ae/",
     skills: [
       "Next.js",
       "TypeScript",
@@ -161,7 +222,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "10.2025",
     },
-    link: "https://corporategiftsdubaii.ae/",
+    link: "https://corporategifts-xi.vercel.app/",
     skills: [
       "Next.js",
       "TypeScript",
