@@ -1,34 +1,91 @@
 import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
-  // Cyberlabs India Landing Page
+  // Modexa
   {
-    id: "Cyberlabs-India-Landing-Page",
-    title: "Cyberlabs India Landing Page",
+    id: "Modexa",
+    title: "Modexa",
     period: {
       start: "05.2026",
     },
-    link: "https://cyberlabs-india-landingpage.vercel.app/",
+    link: "https://modexa-ui.vercel.app/",
     skills: [
       "Next.js",
       "TypeScript",
       "Motion",
-      "GSAP",
-      "Lenis",
+      "Hairline",
       "Tailwind CSS",
-      "yarn",
-      "React Hook Form",
+      "mPurse",
+      "UPI",
     ],
-    description: `**Cyberlabs India Landing Page** promotes free cybersecurity career guidance and industry insight webinars for students and professionals exploring the field.
+    description: `**Modexa** is a brand-focused marketplace for AI models and gateway services — one request stays, the model can change.
 
-- Single-page marketing site for webinar registration and schedule discovery
-- Smooth scrolling with Lenis and scroll-driven Motion / GSAP animations
-- Registration flows built with React Hook Form
-- Responsive, SEO-friendly layout with Tailwind CSS
-- Highlights upcoming sessions, expert-led topics, and career pathways in modern cybersecurity
+- Unified API so chat, embeddings, images, and audio share one endpoint while the model is just a field
+- Smart routing that sends each job to the model that belongs
+- Automatic fallbacks so if one provider drops, the next answers
+- Observability to see which model answered, with tokens, latency, and spend
+- Enterprise controls so each team is told which models they may use
+- UPI checkout integrated with the mPurse API
+- Skeleton loading and motion from [Hairline](https://hairline.lucasmarkes.com/)
+- Modern, clean, brand-led UI with tasteful micro-interactions and animations
 `,
-    logo: "/icon/cyberlabs.svg",
+    logo: "/icon/modexa.svg",
     isExpanded: true,
+  },
+  // Talabat Run kiosk game
+  {
+    id: "Talabat-Run",
+    title: "Talabat Run",
+    period: {
+      start: "06.2026",
+    },
+    link: "https://talabatrun.vercel.app/",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "Canvas",
+      "Supabase",
+      "Touch Screen",
+      "Event Tech",
+    ],
+    description: `**Talabat Run** is a Subway Surfers–style kiosk game built for a Talabat brand event on a 50-inch touch display.
+
+- Players enter their name to start, then ride and collect food on a running road
+- Healthy items add +10; junk food deducts −5
+- Each run lasts 60 seconds
+- Live leaderboard so players can see their real-time position
+- Built with Next.js, Tailwind CSS, Motion, and Canvas
+- Scores stored in Supabase
+- Touch-first gameplay with sound effects for on-site engagement`,
+    logo: "/icon/talabat.ico",
+  },
+  // GG International Trading
+  {
+    id: "GG-International-Trading",
+    title: "GG International Trading",
+    period: {
+      start: "07.2026",
+    },
+    link: "https://ggwint.vercel.app/",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Motion",
+      "Tailwind CSS",
+      "React",
+      "Responsive",
+    ],
+    description: `**GG International Trading LLC** is a UAE-based import-export company site for industrial, construction, and consumer product lines.
+
+- Clean, minimal marketing site with a heavily designed homepage hero
+- Motion-driven micro-interactions built with Next.js, TypeScript, and Motion
+- Product categories: auto spare parts, construction and safety tools, construction materials, electrics and electronics, food / agro / pharma chemicals, food products, IT and accessories, paints and finishes, solar panels and lithium batteries, water and fireproofing
+- Responsive and optimized across phones, tablets, and desktop
+- Brand-focused layout with a calm, modern visual system
+`,
+    logo: "/icon/gg-international.png",
   },
   // cyberlabs India Project
   {

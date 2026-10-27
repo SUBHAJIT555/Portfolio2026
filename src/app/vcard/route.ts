@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 import { NextResponse } from "next/server";
 import sharp from "sharp";
 import VCard from "vcard-creator";
@@ -10,20 +13,20 @@ export const dynamic = "force-static";
 export async function GET() {
   const card = new VCard();
 
-  card
-    .addName(USER.lastName, USER.firstName);
-  
+  card.addName(USER.lastName, USER.firstName);
+
   // Add all phone numbers
-  const phoneNumbers = USER.phoneNumbers && USER.phoneNumbers.length > 0
-    ? USER.phoneNumbers
-    : USER.phoneNumber
-      ? [USER.phoneNumber]
-      : [];
-  
+  const phoneNumbers =
+    USER.phoneNumbers && USER.phoneNumbers.length > 0
+      ? USER.phoneNumbers
+      : USER.phoneNumber
+        ? [USER.phoneNumber]
+        : [];
+
   phoneNumbers.forEach((phone) => {
     card.addPhoneNumber(decodePhoneNumber(phone));
   });
-  
+
   card
     .addAddress(USER.address)
     .addEmail(decodeEmail(USER.email))
@@ -50,19 +53,25 @@ export async function GET() {
 
 async function getVCardPhoto(url: string) {
   try {
-    const res = await fetch(url);
+    let buffer: Buffer;
 
-    if (!res.ok) {
-      return null;
+    if (url.startsWith("/")) {
+      buffer = await readFile(join(process.cwd(), "public", url));
+    } else {
+      const res = await fetch(url);
+
+      if (!res.ok) {
+        return null;
+      }
+
+      buffer = Buffer.from(await res.arrayBuffer());
+      const contentType = res.headers.get("Content-Type") || "";
+      if (!contentType.startsWith("image/")) {
+        return null;
+      }
     }
 
-    const buffer = Buffer.from(await res.arrayBuffer());
     if (buffer.length === 0) {
-      return null;
-    }
-
-    const contentType = res.headers.get("Content-Type") || "";
-    if (!contentType.startsWith("image/")) {
       return null;
     }
 

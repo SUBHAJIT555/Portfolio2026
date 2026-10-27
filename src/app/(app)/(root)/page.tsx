@@ -1,5 +1,7 @@
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
+// import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
+import { SITE_INFO } from "@/config/site";
 import { About } from "@/features/portfolio/components/about";
 // import { Awards } from "@/features/portfolio/components/awards";
 import { Certifications } from "@/features/portfolio/components/certifications";
@@ -13,7 +15,6 @@ import { ProfileHeader } from "@/features/portfolio/components/profile-header";
 import { Projects } from "@/features/portfolio/components/projects";
 import { SocialLinks } from "@/features/portfolio/components/social-links";
 import { TeckStack } from "@/features/portfolio/components/teck-stack";
-// import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
 import { USER } from "@/features/portfolio/data/user";
 import { cn } from "@/lib/utils";
 
@@ -82,7 +83,7 @@ function getPageJsonLd(): WithContext<PageSchema> {
       "@type": "Person",
       name: USER.displayName,
       identifier: USER.username,
-      image: USER.avatar,
+      image: new URL(USER.avatar, SITE_INFO.url).href,
     },
   };
 }

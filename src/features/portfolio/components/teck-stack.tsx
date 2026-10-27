@@ -1,35 +1,39 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-
 import { cn } from "@/lib/utils";
 
-import { TECH_STACK } from "../data/tech-stack";
+import { TECH_STACK, TECH_STACK_SECTIONS } from "../data/tech-stack";
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "./panel";
 
-// Icon source mapping for technologies with alternative names or custom sources
-const ICON_SOURCE_MAP: Record<string, { iconSet: string; iconName: string }> = {
-  framer: { iconSet: "simple-icons", iconName: "framer" },
-  visualstudiocode: { iconSet: "simple-icons", iconName: "visualstudiocode" },
-  // Try alternative names for potentially missing icons
-  cursor: { iconSet: "simple-icons", iconName: "cursor" },
-  deepseek: { iconSet: "simple-icons", iconName: "deepseek" },
-  shadcnui: { iconSet: "simple-icons", iconName: "shadcnui" },
+const ICON_SOURCE_MAP: Record<string, string> = {
+  framer: "framer",
+  visualstudiocode: "visualstudiocode",
+  cursor: "cursor",
+  shadcnui: "shadcnui",
+  postgresql: "postgresql",
+  supabase: "supabase",
+  radixui: "radixui",
+  baseui: "mui",
+  gemini: "googlegemini",
+  claude: "claude",
+  css3: "css",
+  gsap: "gsap",
+  bootstrap: "bootstrap",
 };
 
-function getIconUrl(key: string, isDark?: boolean): string {
-  const mapping = ICON_SOURCE_MAP[key];
-  const iconName = mapping?.iconName || key;
-  const iconSet = mapping?.iconSet || "simple-icons";
+const ICON_VERSION: Record<string, string> = {
+  visualstudiocode: "11",
+};
 
-  // In dark mode, use white color for better visibility
-  if (isDark) {
-    return `https://api.iconify.design/${iconSet}/${iconName}.svg?color=%23ffffff`;
-  }
+const LOCAL_ICON_URL: Record<string, string> = {
+  shaders: "/icon/shaders.svg",
+};
 
-  // Use brand color from Simple Icons in light mode
-  return `https://api.iconify.design/${iconSet}/${iconName}.svg`;
+function getIconUrl(key: string): string {
+  if (LOCAL_ICON_URL[key]) return LOCAL_ICON_URL[key];
+  const iconName = ICON_SOURCE_MAP[key] || key;
+  const version = ICON_VERSION[key] ?? "15";
+  return `https://cdn.jsdelivr.net/npm/simple-icons@${version}/icons/${iconName}.svg`;
 }
 
 function TechIcon({
@@ -39,44 +43,37 @@ function TechIcon({
   tech: { key: string; title: string; theme?: boolean };
   className?: string;
 }) {
-  const [error, setError] = useState(false);
-
-  if (error) {
-    // Fallback: show first letter of the tech name
-    return (
-      <div
-        className={cn(
-          "flex size-4 items-center justify-center rounded bg-zinc-200 text-[10px] font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
-          className
-        )}
-      >
-        {tech.title.charAt(0)}
-      </div>
-    );
-  }
-
-  // Use brand colors in light mode, white icons in dark mode
   return (
-    <>
-      <Image
-        src={getIconUrl(tech.key, false)}
-        alt={`${tech.title} icon`}
-        width={16}
-        height={16}
-        className={cn("block dark:hidden", className)}
-        unoptimized
-        onError={() => setError(true)}
-      />
-      <Image
-        src={getIconUrl(tech.key, true)}
-        alt={`${tech.title} icon`}
-        width={16}
-        height={16}
-        className={cn("hidden dark:block", className)}
-        unoptimized
-        onError={() => setError(true)}
-      />
-    </>
+    <img
+      src={getIconUrl(tech.key)}
+      alt=""
+      width={14}
+      height={14}
+      className={cn("size-3.5 shrink-0 brightness-0 dark:invert", className)}
+    />
+  );
+}
+
+function TechChip({ tech }: { tech: (typeof TECH_STACK)[number] }) {
+  return (
+    <a
+      href={tech.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={tech.title}
+      className={cn(
+        "inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[0.8rem] leading-none",
+        "border-zinc-200 bg-white text-zinc-900",
+        "shadow-[0_1px_2px_rgba(0,0,0,0.05)]",
+        "transition-[box-shadow,border-color] hover:shadow-[0_2px_6px_rgba(0,0,0,0.08)]",
+        "dark:border-white/15 dark:bg-black/50 dark:text-white/95",
+        "dark:shadow-[0_1px_3px_rgba(0,0,0,0.4)]",
+        "dark:hover:border-white/25 dark:hover:shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+      )}
+    >
+      <TechIcon tech={tech} className="size-3.5 shrink-0" />
+      <span className="font-medium whitespace-nowrap">{tech.title}</span>
+    </a>
   );
 }
 
@@ -87,41 +84,43 @@ export function TeckStack() {
         <PanelTitle>Stack</PanelTitle>
       </PanelHeader>
 
-      {/* Tech stact container  */}
-
       <PanelContent
         className={cn(
+          "p-0",
           "[--pattern-foreground:var(--color-zinc-950)]/8 dark:[--pattern-foreground:var(--color-white)]/5",
           "bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center",
           "bg-background/95 dark:bg-zinc-950/75"
         )}
       >
-        <ul className="flex flex-wrap gap-2 select-none">
-          {TECH_STACK.map((tech) => {
-            return (
-              <li key={tech.key} className="flex">
-                <a
-                  href={tech.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={tech.title}
-                  className={cn(
-                    "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.95rem] leading-none",
-                    "border-zinc-200/90 bg-white text-zinc-900 shadow-xs",
-                    "transition-colors hover:border-zinc-300 hover:bg-zinc-50",
-                    "dark:border-white/10 dark:bg-black/45 dark:text-white/95 dark:shadow-none",
-                    "dark:hover:border-white/20 dark:hover:bg-black/60"
-                  )}
-                >
-                  <TechIcon tech={tech} className="size-4 shrink-0" />
-                  <span className="font-medium whitespace-nowrap">
-                    {tech.title}
-                  </span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {TECH_STACK_SECTIONS.map((section, index) => {
+          const items = TECH_STACK.filter((tech) =>
+            tech.categories.includes(section)
+          );
+
+          if (items.length === 0) return null;
+
+          return (
+            <div
+              key={section}
+              className="grid gap-3 border-b border-edge px-4 py-4 last:border-b-0 sm:grid-cols-[11.5rem_1fr] sm:items-start"
+            >
+              <div className="flex items-baseline gap-2 font-mono text-sm text-muted-foreground">
+                <span className="tabular-nums">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{section}</span>
+              </div>
+
+              <ul className="flex flex-wrap gap-2 select-none">
+                {items.map((tech) => (
+                  <li key={tech.key} className="flex">
+                    <TechChip tech={tech} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </PanelContent>
     </Panel>
   );

@@ -58,9 +58,8 @@ export const USER = {
 - Focused on **continuous learning** and staying current with frontend technologies.
 - Passionate about solving **complex UI/UX challenges** and transforming designs into interactive applications.
 `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?v=4",
+  avatar: "/assets/image/sdp.png",
+  ogImage: "/opengraph-image",
   namePronunciationUrl: "/audio/hi.mp3",
   timeZone: "Asia/Kolkata",
   keywords: [

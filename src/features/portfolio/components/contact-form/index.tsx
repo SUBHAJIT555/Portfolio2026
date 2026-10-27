@@ -1,6 +1,5 @@
 "use client";
 
-import { MailIcon, MessageSquareIcon, PhoneIcon, UserIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -10,6 +9,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { useSound } from "@/hooks/use-sound";
 
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "../panel";
+import {
+  ContactEmailIcon,
+  ContactMessageIcon,
+  ContactNameIcon,
+  ContactPhoneIcon,
+} from "./contact-icons";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -143,7 +148,7 @@ export function ContactForm() {
               htmlFor="name"
               className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
-              <UserIcon className="size-4" />
+              <ContactNameIcon className="size-4" />
               Full Name
             </label>
             <Input
@@ -163,7 +168,7 @@ export function ContactForm() {
               htmlFor="email"
               className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
-              <MailIcon className="size-4" />
+              <ContactEmailIcon className="size-4" />
               Email ID
             </label>
             <Input
@@ -183,7 +188,7 @@ export function ContactForm() {
               htmlFor="phone"
               className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
-              <PhoneIcon className="size-4" />
+              <ContactPhoneIcon className="size-4" />
               Phone Number
             </label>
             <Input
@@ -202,7 +207,7 @@ export function ContactForm() {
               htmlFor="projectIdea"
               className="font-geist flex items-center gap-2 text-sm font-medium text-muted-foreground"
             >
-              <MessageSquareIcon className="size-4" />
+              <ContactMessageIcon className="size-4" />
               About Project Idea
             </label>
             <Textarea
@@ -242,7 +247,7 @@ export function ContactForm() {
                 <span>Sending...</span>
               ) : (
                 <>
-                  <MailIcon className="size-4" />
+                  <ContactEmailIcon className="size-4" />
                   Submit
                 </>
               )}

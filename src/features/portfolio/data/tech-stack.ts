@@ -1,7 +1,16 @@
 import type { TechStack } from "../types/tech-stack";
 
+export const TECH_STACK_SECTIONS = [
+  "Language",
+  "Frontend",
+  "Backend & Database",
+  "Workflow & AI",
+] as const;
+
+export type TechStackSection = (typeof TECH_STACK_SECTIONS)[number];
+
 export const TECH_STACK: TechStack[] = [
-  // Languages
+  // Language
   {
     key: "typescript",
     title: "TypeScript",
@@ -14,207 +23,230 @@ export const TECH_STACK: TechStack[] = [
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     categories: ["Language"],
   },
-  {
-    key: "html5",
-    title: "HTML",
-    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    categories: ["Language", "Markup"],
-  },
-  {
-    key: "css3",
-    title: "CSS",
-    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    categories: ["Language", "Styling"],
-  },
-
-  // Runtime Environment
-  {
-    key: "nodedotjs",
-    title: "Node.js",
-    href: "https://nodejs.org/",
-    categories: ["Runtime Environment"],
-  },
-
-  // Package Managers
-  {
-    key: "npm",
-    title: "npm",
-    href: "https://www.npmjs.com/",
-    categories: ["Package Manager"],
-  },
-  {
-    key: "yarn",
-    title: "Yarn",
-    href: "https://yarnpkg.com/",
-    categories: ["Package Manager"],
-  },
-  {
-    key: "pnpm",
-    title: "pnpm",
-    href: "https://pnpm.io/",
-    categories: ["Package Manager"],
-  },
-
-  // Frameworks
+  // Frontend — core first
   {
     key: "nextdotjs",
     title: "Next.js",
     href: "https://nextjs.org/",
-    categories: ["Framework"],
+    categories: ["Frontend"],
     theme: true,
   },
   {
-    key: "tailwindcss",
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com/",
-    categories: ["Framework"],
-  },
-  {
-    key: "electron",
-    title: "Electron",
-    href: "https://www.electronjs.org/",
-    categories: ["Framework", "Desktop"],
+    key: "vite",
+    title: "Vite",
+    href: "https://vitejs.dev/",
+    categories: ["Frontend"],
   },
   {
     key: "react",
     title: "React",
     href: "https://react.dev/",
-    categories: ["Library", "UI Library"],
+    categories: ["Frontend"],
   },
-
-  // UI Libraries
-
+  {
+    key: "tailwindcss",
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
+    categories: ["Frontend"],
+  },
+  {
+    key: "html5",
+    title: "HTML",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    categories: ["Frontend"],
+  },
+  {
+    key: "css3",
+    title: "CSS",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    categories: ["Frontend"],
+  },
+  {
+    key: "bootstrap",
+    title: "Bootstrap",
+    href: "https://getbootstrap.com/",
+    categories: ["Frontend"],
+  },
+  {
+    key: "shaders",
+    title: "Shaders",
+    href: "https://shaders.com/",
+    categories: ["Frontend"],
+  },
+  {
+    key: "baseui",
+    title: "Base UI",
+    href: "https://base-ui.com/",
+    categories: ["Frontend"],
+  },
+  {
+    key: "radixui",
+    title: "Radix UI",
+    href: "https://www.radix-ui.com/",
+    categories: ["Frontend"],
+  },
   {
     key: "shadcnui",
     title: "shadcn/ui",
     href: "https://ui.shadcn.com/",
-    categories: ["Library", "Component Library"],
+    categories: ["Frontend"],
     theme: true,
   },
-
-  // Animation Libraries
   {
     key: "framer",
     title: "Motion",
     href: "https://motion.dev/",
-    categories: ["Library", "Animation"],
+    categories: ["Frontend"],
   },
   {
     key: "gsap",
     title: "GSAP",
     href: "https://gsap.com/",
-    categories: ["Library", "Animation"],
+    categories: ["Frontend"],
   },
-
-  // Navigation Libraries
   {
     key: "reactrouter",
     title: "React Router",
     href: "https://reactrouter.com/",
-    categories: ["Library", "Navigation"],
+    categories: ["Frontend"],
     theme: true,
   },
-
-  // 3D Libraries
   {
     key: "threedotjs",
     title: "Three.js",
     href: "https://threejs.org/",
-    categories: ["Library", "3D"],
+    categories: ["Frontend"],
   },
-
-  // State Management
   {
     key: "redux",
     title: "Redux",
     href: "https://redux.js.org/",
-    categories: ["State Management"],
-  },
-
-  // Build Tools
-  {
-    key: "vite",
-    title: "Vite",
-    href: "https://vitejs.dev/",
-    categories: ["Build Tool"],
-  },
-
-  // Version Control
-  {
-    key: "git",
-    title: "Git",
-    href: "https://git-scm.com/",
-    categories: ["Version Control"],
+    categories: ["Frontend"],
   },
   {
-    key: "github",
-    title: "GitHub",
-    href: "https://github.com/",
-    categories: ["Platform", "Version Control"],
+    key: "electron",
+    title: "Electron",
+    href: "https://www.electronjs.org/",
+    categories: ["Frontend"],
   },
 
-  // Databases
+  // Backend & Database — new tools first
+  {
+    key: "postgresql",
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org/",
+    categories: ["Backend & Database"],
+  },
+  {
+    key: "supabase",
+    title: "Supabase",
+    href: "https://supabase.com/",
+    categories: ["Backend & Database"],
+  },
+  {
+    key: "nodedotjs",
+    title: "Node.js",
+    href: "https://nodejs.org/",
+    categories: ["Backend & Database"],
+  },
   {
     key: "mysql",
     title: "MySQL",
     href: "https://www.mysql.com/",
-    categories: ["Database"],
+    categories: ["Backend & Database"],
   },
   {
     key: "mongodb",
     title: "MongoDB",
     href: "https://www.mongodb.com/",
-    categories: ["Database"],
+    categories: ["Backend & Database"],
   },
 
-  // Containerization
+  // Workflow & AI — tools first, then AI
+  {
+    key: "cursor",
+    title: "Cursor",
+    href: "https://cursor.com/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "visualstudiocode",
+    title: "VS Code",
+    href: "https://code.visualstudio.com/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "git",
+    title: "Git",
+    href: "https://git-scm.com/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "github",
+    title: "GitHub",
+    href: "https://github.com/",
+    categories: ["Workflow & AI"],
+  },
   {
     key: "docker",
     title: "Docker",
     href: "https://www.docker.com/",
-    categories: ["Containerization"],
+    categories: ["Workflow & AI"],
   },
-
-  // Hosting Platforms
+  {
+    key: "yarn",
+    title: "Yarn",
+    href: "https://yarnpkg.com/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "pnpm",
+    title: "pnpm",
+    href: "https://pnpm.io/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "npm",
+    title: "npm",
+    href: "https://www.npmjs.com/",
+    categories: ["Workflow & AI"],
+  },
   {
     key: "vercel",
     title: "Vercel",
     href: "https://vercel.com/",
-    categories: ["Platform", "Hosting"],
+    categories: ["Workflow & AI"],
+    theme: true,
   },
   {
     key: "netlify",
     title: "Netlify",
     href: "https://www.netlify.com/",
-    categories: ["Platform", "Hosting"],
+    categories: ["Workflow & AI"],
   },
-
-  // AI Tools
+  {
+    key: "gemini",
+    title: "Gemini",
+    href: "https://gemini.google.com/",
+    categories: ["Workflow & AI"],
+  },
+  {
+    key: "claude",
+    title: "Claude",
+    href: "https://claude.ai/",
+    categories: ["Workflow & AI"],
+  },
   {
     key: "openai",
     title: "ChatGPT",
     href: "https://chatgpt.com/",
-    categories: ["Tools", "AI"],
+    categories: ["Workflow & AI"],
     theme: true,
   },
   {
     key: "githubcopilot",
     title: "GitHub Copilot",
     href: "https://github.com/features/copilot",
-    categories: ["Tools", "AI"],
-  },
-
-  // Code Editors
-  {
-    key: "visualstudiocode",
-    title: "VS Code",
-    href: "https://code.visualstudio.com/",
-    categories: ["Tools", "Editor"],
-  },
-  {
-    key: "cursor",
-    title: "Cursor",
-    href: "https://cursor.sh/",
-    categories: ["Tools", "Editor"],
+    categories: ["Workflow & AI"],
   },
 ];

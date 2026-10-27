@@ -8,6 +8,33 @@ export const EXPERIENCES: Experience[] = [
     companyLogo: "/icon/baharnani.webp",
     positions: [
       {
+        id: "cedd7adb-4118-4085-9983-ae00530b49e2",
+        title: "UI Lead",
+        employmentPeriod: {
+          start: "02.2025",
+        },
+        employmentType: "Full-time",
+        icon: "design",
+        isExpanded: true,
+        description: `- Lead UI/UX design and frontend development initiatives, establishing comprehensive design guidelines and technical standards across all products.
+- Design and develop high-fidelity interfaces, creating both visual mockups and implementing them as production-ready code.
+- Build and maintain reusable component libraries and design systems that bridge design and development workflows.
+- Mentor design and development team members, fostering cross-functional collaboration and knowledge sharing.
+- Conduct user research and usability testing, then translate insights into both design improvements and technical implementations.
+- Write clean, maintainable frontend code using React, TypeScript, and modern CSS frameworks while ensuring design consistency.
+- Establish design-to-development handoff processes, workflows, and best practices for seamless collaboration.
+- Collaborate with product managers and stakeholders to translate business requirements into both compelling designs and scalable technical solutions.
+- Drive innovation by staying current with design trends and frontend technologies, implementing cutting-edge patterns in both design and code.`,
+        skills: [
+          "UI/UX",
+          "Design",
+          "Team Leadership",
+          "User Research",
+          "Collaboration",
+          "Creative Problem-solving",
+        ],
+      },
+      {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
         title: "Web Developer",
         employmentPeriod: {
@@ -45,32 +72,6 @@ export const EXPERIENCES: Experience[] = [
           "Performance Optimization",
           "Git",
           "Responsive Design",
-        ],
-      },
-      {
-        id: "cedd7adb-4118-4085-9983-ae00530b49e2",
-        title: "UI Lead",
-        employmentPeriod: {
-          start: "02.2025",
-        },
-        employmentType: "Full-time",
-        icon: "design",
-        description: `- Lead UI/UX design and frontend development initiatives, establishing comprehensive design guidelines and technical standards across all products.
-- Design and develop high-fidelity interfaces, creating both visual mockups and implementing them as production-ready code.
-- Build and maintain reusable component libraries and design systems that bridge design and development workflows.
-- Mentor design and development team members, fostering cross-functional collaboration and knowledge sharing.
-- Conduct user research and usability testing, then translate insights into both design improvements and technical implementations.
-- Write clean, maintainable frontend code using React, TypeScript, and modern CSS frameworks while ensuring design consistency.
-- Establish design-to-development handoff processes, workflows, and best practices for seamless collaboration.
-- Collaborate with product managers and stakeholders to translate business requirements into both compelling designs and scalable technical solutions.
-- Drive innovation by staying current with design trends and frontend technologies, implementing cutting-edge patterns in both design and code.`,
-        skills: [
-          "UI/UX",
-          "Design ",
-          "Team Leadership",
-          "User Research",
-          "Collaboration",
-          "Creative Problem-solving",
         ],
       },
     ],

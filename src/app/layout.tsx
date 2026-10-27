@@ -85,8 +85,8 @@ export const metadata: Metadata = {
       },
     ],
     apple: {
-      url: "/icon/faviconWhite.svg",
-      type: "image/svg+xml",
+      url: "/apple-icon",
+      type: "image/png",
       sizes: "180x180",
     },
   },

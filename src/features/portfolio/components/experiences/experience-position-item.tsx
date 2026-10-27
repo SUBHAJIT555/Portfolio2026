@@ -23,7 +23,7 @@ export function ExperiencePositionItem({
   position: ExperiencePosition;
   isLastInTimeline?: boolean;
 }) {
-  const { start, end } = position.employmentPeriod;
+  const { start, end } = position.employmentPeriod ?? {};
   const isOngoing = !end;
 
   return (
