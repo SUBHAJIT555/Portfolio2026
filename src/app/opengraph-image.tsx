@@ -19,6 +19,7 @@ export default async function Image() {
   const avatar = await readFile(
     join(process.cwd(), "public/assets/image/sdp.png")
   );
+  const avatarSrc = `data:image/png;base64,${avatar.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -68,7 +69,7 @@ export default async function Image() {
           </div>
         </div>
         <img
-          src={Uint8Array.from(avatar).buffer}
+          src={avatarSrc}
           width={280}
           height={280}
           alt=""
